@@ -1,0 +1,1510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		205F58301FD09DB500495384 /* GoSwiftyM3U8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205F58261FD09DB500495384 /* GoSwiftyM3U8.framework */; };
+		205F58371FD09DB500495384 /* GoSwiftyM3U8.h in Headers */ = {isa = PBXBuildFile; fileRef = 205F58291FD09DB500495384 /* GoSwiftyM3U8.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		205F584C1FD09E0200495384 /* GoSwiftyM3U8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205F58431FD09E0100495384 /* GoSwiftyM3U8.framework */; };
+		205F58681FD09E2400495384 /* GoSwiftyM3U8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205F585F1FD09E2300495384 /* GoSwiftyM3U8.framework */; };
+		205F587E1FD0A1CB00495384 /* GoSwiftyM3U8.h in Headers */ = {isa = PBXBuildFile; fileRef = 205F58291FD09DB500495384 /* GoSwiftyM3U8.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		205F587F1FD0A1CC00495384 /* GoSwiftyM3U8.h in Headers */ = {isa = PBXBuildFile; fileRef = 205F58291FD09DB500495384 /* GoSwiftyM3U8.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		205F58931FD0A3FC00495384 /* PlaylistFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58831FD0A3FB00495384 /* PlaylistFetcher.swift */; };
+		205F58941FD0A3FC00495384 /* PlaylistFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58831FD0A3FB00495384 /* PlaylistFetcher.swift */; };
+		205F58951FD0A3FC00495384 /* PlaylistFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58831FD0A3FB00495384 /* PlaylistFetcher.swift */; };
+		205F58961FD0A3FC00495384 /* M3U8Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58851FD0A3FB00495384 /* M3U8Manager.swift */; };
+		205F58971FD0A3FC00495384 /* M3U8Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58851FD0A3FB00495384 /* M3U8Manager.swift */; };
+		205F58981FD0A3FC00495384 /* M3U8Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58851FD0A3FB00495384 /* M3U8Manager.swift */; };
+		205F58991FD0A3FC00495384 /* MasterPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58881FD0A3FC00495384 /* MasterPlaylist.swift */; };
+		205F589A1FD0A3FC00495384 /* MasterPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58881FD0A3FC00495384 /* MasterPlaylist.swift */; };
+		205F589B1FD0A3FC00495384 /* MasterPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58881FD0A3FC00495384 /* MasterPlaylist.swift */; };
+		205F589C1FD0A3FC00495384 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58891FD0A3FC00495384 /* Playlist.swift */; };
+		205F589D1FD0A3FC00495384 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58891FD0A3FC00495384 /* Playlist.swift */; };
+		205F589E1FD0A3FC00495384 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58891FD0A3FC00495384 /* Playlist.swift */; };
+		205F589F1FD0A3FC00495384 /* MediaPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F588A1FD0A3FC00495384 /* MediaPlaylist.swift */; };
+		205F58A01FD0A3FC00495384 /* MediaPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F588A1FD0A3FC00495384 /* MediaPlaylist.swift */; };
+		205F58A11FD0A3FC00495384 /* MediaPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F588A1FD0A3FC00495384 /* MediaPlaylist.swift */; };
+		205F58A21FD0A3FC00495384 /* BaseTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F588C1FD0A3FC00495384 /* BaseTag.swift */; };
+		205F58A31FD0A3FC00495384 /* BaseTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F588C1FD0A3FC00495384 /* BaseTag.swift */; };
+		205F58A41FD0A3FC00495384 /* BaseTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F588C1FD0A3FC00495384 /* BaseTag.swift */; };
+		205F58A51FD0A3FC00495384 /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F588D1FD0A3FC00495384 /* Tags.swift */; };
+		205F58A61FD0A3FC00495384 /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F588D1FD0A3FC00495384 /* Tags.swift */; };
+		205F58A71FD0A3FC00495384 /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F588D1FD0A3FC00495384 /* Tags.swift */; };
+		205F58A81FD0A3FC00495384 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F588E1FD0A3FC00495384 /* Tag.swift */; };
+		205F58A91FD0A3FC00495384 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F588E1FD0A3FC00495384 /* Tag.swift */; };
+		205F58AA1FD0A3FC00495384 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F588E1FD0A3FC00495384 /* Tag.swift */; };
+		205F58AB1FD0A3FC00495384 /* PlaylistOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58901FD0A3FC00495384 /* PlaylistOperation.swift */; };
+		205F58AC1FD0A3FC00495384 /* PlaylistOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58901FD0A3FC00495384 /* PlaylistOperation.swift */; };
+		205F58AD1FD0A3FC00495384 /* PlaylistOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58901FD0A3FC00495384 /* PlaylistOperation.swift */; };
+		205F58AE1FD0A3FC00495384 /* M3U8Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58921FD0A3FC00495384 /* M3U8Parser.swift */; };
+		205F58AF1FD0A3FC00495384 /* M3U8Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58921FD0A3FC00495384 /* M3U8Parser.swift */; };
+		205F58B01FD0A3FC00495384 /* M3U8Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58921FD0A3FC00495384 /* M3U8Parser.swift */; };
+		205F58B61FD0A43200495384 /* M3U8ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58B21FD0A43200495384 /* M3U8ParserTests.swift */; };
+		205F58B71FD0A43200495384 /* M3U8ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58B21FD0A43200495384 /* M3U8ParserTests.swift */; };
+		205F58B81FD0A43200495384 /* M3U8ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58B21FD0A43200495384 /* M3U8ParserTests.swift */; };
+		205F58B91FD0A43200495384 /* M3U8ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58B41FD0A43200495384 /* M3U8ManagerTests.swift */; };
+		205F58BA1FD0A43200495384 /* M3U8ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58B41FD0A43200495384 /* M3U8ManagerTests.swift */; };
+		205F58BB1FD0A43200495384 /* M3U8ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58B41FD0A43200495384 /* M3U8ManagerTests.swift */; };
+		205F58BC1FD0A43200495384 /* TestsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58B51FD0A43200495384 /* TestsHelper.swift */; };
+		205F58BD1FD0A43200495384 /* TestsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58B51FD0A43200495384 /* TestsHelper.swift */; };
+		205F58BE1FD0A43200495384 /* TestsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F58B51FD0A43200495384 /* TestsHelper.swift */; };
+		205F58C01FD0A44A00495384 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 205F58BF1FD0A44A00495384 /* Resources */; };
+		205F58C11FD0A44A00495384 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 205F58BF1FD0A44A00495384 /* Resources */; };
+		205F58C21FD0A44A00495384 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 205F58BF1FD0A44A00495384 /* Resources */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		205F58311FD09DB500495384 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 205F581B1FD09CE600495384 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 205F58251FD09DB500495384;
+			remoteInfo = "GoSwiftyM3U8-iOS";
+		};
+		205F584D1FD09E0200495384 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 205F581B1FD09CE600495384 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 205F58421FD09E0100495384;
+			remoteInfo = "GoSwiftyM3U8-tvOS";
+		};
+		205F58691FD09E2400495384 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 205F581B1FD09CE600495384 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 205F585E1FD09E2300495384;
+			remoteInfo = "GoSwiftyM3U8-macOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		205F58261FD09DB500495384 /* GoSwiftyM3U8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSwiftyM3U8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		205F58291FD09DB500495384 /* GoSwiftyM3U8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoSwiftyM3U8.h; sourceTree = "<group>"; };
+		205F582A1FD09DB500495384 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		205F582F1FD09DB500495384 /* GoSwiftyM3U8-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoSwiftyM3U8-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		205F58361FD09DB500495384 /* Info-iOSTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOSTests.plist"; sourceTree = "<group>"; };
+		205F58431FD09E0100495384 /* GoSwiftyM3U8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSwiftyM3U8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		205F58461FD09E0100495384 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		205F584B1FD09E0200495384 /* GoSwiftyM3U8-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoSwiftyM3U8-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		205F58521FD09E0200495384 /* Info-tvOSTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOSTests.plist"; sourceTree = "<group>"; };
+		205F585F1FD09E2300495384 /* GoSwiftyM3U8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoSwiftyM3U8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		205F58621FD09E2300495384 /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
+		205F58671FD09E2400495384 /* GoSwiftyM3U8-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoSwiftyM3U8-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		205F586E1FD09E2400495384 /* Info-macOSTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOSTests.plist"; sourceTree = "<group>"; };
+		205F58831FD0A3FB00495384 /* PlaylistFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistFetcher.swift; sourceTree = "<group>"; };
+		205F58851FD0A3FB00495384 /* M3U8Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M3U8Manager.swift; sourceTree = "<group>"; };
+		205F58881FD0A3FC00495384 /* MasterPlaylist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterPlaylist.swift; sourceTree = "<group>"; };
+		205F58891FD0A3FC00495384 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		205F588A1FD0A3FC00495384 /* MediaPlaylist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlaylist.swift; sourceTree = "<group>"; };
+		205F588C1FD0A3FC00495384 /* BaseTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTag.swift; sourceTree = "<group>"; };
+		205F588D1FD0A3FC00495384 /* Tags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
+		205F588E1FD0A3FC00495384 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		205F58901FD0A3FC00495384 /* PlaylistOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistOperation.swift; sourceTree = "<group>"; };
+		205F58921FD0A3FC00495384 /* M3U8Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M3U8Parser.swift; sourceTree = "<group>"; };
+		205F58B21FD0A43200495384 /* M3U8ParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M3U8ParserTests.swift; sourceTree = "<group>"; };
+		205F58B41FD0A43200495384 /* M3U8ManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M3U8ManagerTests.swift; sourceTree = "<group>"; };
+		205F58B51FD0A43200495384 /* TestsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsHelper.swift; sourceTree = "<group>"; };
+		205F58BF1FD0A44A00495384 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		205F58221FD09DB500495384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F582C1FD09DB500495384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205F58301FD09DB500495384 /* GoSwiftyM3U8.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F583F1FD09E0100495384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F58481FD09E0200495384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205F584C1FD09E0200495384 /* GoSwiftyM3U8.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F585B1FD09E2300495384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F58641FD09E2400495384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205F58681FD09E2400495384 /* GoSwiftyM3U8.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		205F581A1FD09CE600495384 = {
+			isa = PBXGroup;
+			children = (
+				205F58761FD09E2B00495384 /* Sources */,
+				205F58811FD0A39800495384 /* Tests */,
+				205F58271FD09DB500495384 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		205F58271FD09DB500495384 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				205F58261FD09DB500495384 /* GoSwiftyM3U8.framework */,
+				205F582F1FD09DB500495384 /* GoSwiftyM3U8-iOSTests.xctest */,
+				205F58431FD09E0100495384 /* GoSwiftyM3U8.framework */,
+				205F584B1FD09E0200495384 /* GoSwiftyM3U8-tvOSTests.xctest */,
+				205F585F1FD09E2300495384 /* GoSwiftyM3U8.framework */,
+				205F58671FD09E2400495384 /* GoSwiftyM3U8-macOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		205F58761FD09E2B00495384 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				205F58841FD0A3FB00495384 /* Managers */,
+				205F58861FD0A3FC00495384 /* Models */,
+				205F58911FD0A3FC00495384 /* Parser */,
+				205F58821FD0A3FB00495384 /* PlaylistFetcher */,
+				205F58801FD0A1F400495384 /* Support Files */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		205F58801FD0A1F400495384 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				205F58291FD09DB500495384 /* GoSwiftyM3U8.h */,
+				205F582A1FD09DB500495384 /* Info-iOS.plist */,
+				205F58461FD09E0100495384 /* Info-tvOS.plist */,
+				205F58621FD09E2300495384 /* Info-macOS.plist */,
+				205F58361FD09DB500495384 /* Info-iOSTests.plist */,
+				205F58521FD09E0200495384 /* Info-tvOSTests.plist */,
+				205F586E1FD09E2400495384 /* Info-macOSTests.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		205F58811FD0A39800495384 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				205F58BF1FD0A44A00495384 /* Resources */,
+				205F58B31FD0A43200495384 /* Managers */,
+				205F58B11FD0A43200495384 /* Parser */,
+				205F58B51FD0A43200495384 /* TestsHelper.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		205F58821FD0A3FB00495384 /* PlaylistFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				205F58831FD0A3FB00495384 /* PlaylistFetcher.swift */,
+			);
+			path = PlaylistFetcher;
+			sourceTree = "<group>";
+		};
+		205F58841FD0A3FB00495384 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				205F58851FD0A3FB00495384 /* M3U8Manager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		205F58861FD0A3FC00495384 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				205F58871FD0A3FC00495384 /* Playlist */,
+				205F588B1FD0A3FC00495384 /* Tags */,
+				205F588F1FD0A3FC00495384 /* PlaylistOperation */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		205F58871FD0A3FC00495384 /* Playlist */ = {
+			isa = PBXGroup;
+			children = (
+				205F58881FD0A3FC00495384 /* MasterPlaylist.swift */,
+				205F58891FD0A3FC00495384 /* Playlist.swift */,
+				205F588A1FD0A3FC00495384 /* MediaPlaylist.swift */,
+			);
+			path = Playlist;
+			sourceTree = "<group>";
+		};
+		205F588B1FD0A3FC00495384 /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				205F588C1FD0A3FC00495384 /* BaseTag.swift */,
+				205F588D1FD0A3FC00495384 /* Tags.swift */,
+				205F588E1FD0A3FC00495384 /* Tag.swift */,
+			);
+			path = Tags;
+			sourceTree = "<group>";
+		};
+		205F588F1FD0A3FC00495384 /* PlaylistOperation */ = {
+			isa = PBXGroup;
+			children = (
+				205F58901FD0A3FC00495384 /* PlaylistOperation.swift */,
+			);
+			path = PlaylistOperation;
+			sourceTree = "<group>";
+		};
+		205F58911FD0A3FC00495384 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				205F58921FD0A3FC00495384 /* M3U8Parser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		205F58B11FD0A43200495384 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				205F58B21FD0A43200495384 /* M3U8ParserTests.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		205F58B31FD0A43200495384 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				205F58B41FD0A43200495384 /* M3U8ManagerTests.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		205F58231FD09DB500495384 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205F58371FD09DB500495384 /* GoSwiftyM3U8.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F58401FD09E0100495384 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205F587E1FD0A1CB00495384 /* GoSwiftyM3U8.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F585C1FD09E2300495384 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205F587F1FD0A1CC00495384 /* GoSwiftyM3U8.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		205F58251FD09DB500495384 /* GoSwiftyM3U8-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 205F58381FD09DB500495384 /* Build configuration list for PBXNativeTarget "GoSwiftyM3U8-iOS" */;
+			buildPhases = (
+				205F58211FD09DB500495384 /* Sources */,
+				205F58221FD09DB500495384 /* Frameworks */,
+				205F58231FD09DB500495384 /* Headers */,
+				205F58241FD09DB500495384 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GoSwiftyM3U8-iOS";
+			productName = "GoSwiftyM3U8-iOS";
+			productReference = 205F58261FD09DB500495384 /* GoSwiftyM3U8.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		205F582E1FD09DB500495384 /* GoSwiftyM3U8-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 205F583B1FD09DB500495384 /* Build configuration list for PBXNativeTarget "GoSwiftyM3U8-iOSTests" */;
+			buildPhases = (
+				205F582B1FD09DB500495384 /* Sources */,
+				205F582C1FD09DB500495384 /* Frameworks */,
+				205F582D1FD09DB500495384 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				205F58321FD09DB500495384 /* PBXTargetDependency */,
+			);
+			name = "GoSwiftyM3U8-iOSTests";
+			productName = "GoSwiftyM3U8-iOSTests";
+			productReference = 205F582F1FD09DB500495384 /* GoSwiftyM3U8-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		205F58421FD09E0100495384 /* GoSwiftyM3U8-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 205F58541FD09E0200495384 /* Build configuration list for PBXNativeTarget "GoSwiftyM3U8-tvOS" */;
+			buildPhases = (
+				205F583E1FD09E0100495384 /* Sources */,
+				205F583F1FD09E0100495384 /* Frameworks */,
+				205F58401FD09E0100495384 /* Headers */,
+				205F58411FD09E0100495384 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GoSwiftyM3U8-tvOS";
+			productName = "GoSwiftyM3U8-tvOS";
+			productReference = 205F58431FD09E0100495384 /* GoSwiftyM3U8.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		205F584A1FD09E0200495384 /* GoSwiftyM3U8-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 205F58571FD09E0200495384 /* Build configuration list for PBXNativeTarget "GoSwiftyM3U8-tvOSTests" */;
+			buildPhases = (
+				205F58471FD09E0200495384 /* Sources */,
+				205F58481FD09E0200495384 /* Frameworks */,
+				205F58491FD09E0200495384 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				205F584E1FD09E0200495384 /* PBXTargetDependency */,
+			);
+			name = "GoSwiftyM3U8-tvOSTests";
+			productName = "GoSwiftyM3U8-tvOSTests";
+			productReference = 205F584B1FD09E0200495384 /* GoSwiftyM3U8-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		205F585E1FD09E2300495384 /* GoSwiftyM3U8-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 205F58701FD09E2400495384 /* Build configuration list for PBXNativeTarget "GoSwiftyM3U8-macOS" */;
+			buildPhases = (
+				205F585A1FD09E2300495384 /* Sources */,
+				205F585B1FD09E2300495384 /* Frameworks */,
+				205F585C1FD09E2300495384 /* Headers */,
+				205F585D1FD09E2300495384 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GoSwiftyM3U8-macOS";
+			productName = "GoSwiftyM3U8-macOS";
+			productReference = 205F585F1FD09E2300495384 /* GoSwiftyM3U8.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		205F58661FD09E2400495384 /* GoSwiftyM3U8-macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 205F58731FD09E2400495384 /* Build configuration list for PBXNativeTarget "GoSwiftyM3U8-macOSTests" */;
+			buildPhases = (
+				205F58631FD09E2400495384 /* Sources */,
+				205F58641FD09E2400495384 /* Frameworks */,
+				205F58651FD09E2400495384 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				205F586A1FD09E2400495384 /* PBXTargetDependency */,
+			);
+			name = "GoSwiftyM3U8-macOSTests";
+			productName = "GoSwiftyM3U8-macOSTests";
+			productReference = 205F58671FD09E2400495384 /* GoSwiftyM3U8-macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		205F581B1FD09CE600495384 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				TargetAttributes = {
+					205F58251FD09DB500495384 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					205F582E1FD09DB500495384 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					205F58421FD09E0100495384 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					205F584A1FD09E0200495384 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					205F585E1FD09E2300495384 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					205F58661FD09E2400495384 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 205F581E1FD09CE600495384 /* Build configuration list for PBXProject "GoSwiftyM3U8" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 205F581A1FD09CE600495384;
+			productRefGroup = 205F58271FD09DB500495384 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				205F58251FD09DB500495384 /* GoSwiftyM3U8-iOS */,
+				205F582E1FD09DB500495384 /* GoSwiftyM3U8-iOSTests */,
+				205F58421FD09E0100495384 /* GoSwiftyM3U8-tvOS */,
+				205F584A1FD09E0200495384 /* GoSwiftyM3U8-tvOSTests */,
+				205F585E1FD09E2300495384 /* GoSwiftyM3U8-macOS */,
+				205F58661FD09E2400495384 /* GoSwiftyM3U8-macOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		205F58241FD09DB500495384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F582D1FD09DB500495384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205F58C01FD0A44A00495384 /* Resources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F58411FD09E0100495384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F58491FD09E0200495384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205F58C11FD0A44A00495384 /* Resources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F585D1FD09E2300495384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F58651FD09E2400495384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205F58C21FD0A44A00495384 /* Resources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		205F58211FD09DB500495384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205F58A81FD0A3FC00495384 /* Tag.swift in Sources */,
+				205F58AE1FD0A3FC00495384 /* M3U8Parser.swift in Sources */,
+				205F58991FD0A3FC00495384 /* MasterPlaylist.swift in Sources */,
+				205F58961FD0A3FC00495384 /* M3U8Manager.swift in Sources */,
+				205F58AB1FD0A3FC00495384 /* PlaylistOperation.swift in Sources */,
+				205F58A51FD0A3FC00495384 /* Tags.swift in Sources */,
+				205F589F1FD0A3FC00495384 /* MediaPlaylist.swift in Sources */,
+				205F58931FD0A3FC00495384 /* PlaylistFetcher.swift in Sources */,
+				205F589C1FD0A3FC00495384 /* Playlist.swift in Sources */,
+				205F58A21FD0A3FC00495384 /* BaseTag.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F582B1FD09DB500495384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205F58BC1FD0A43200495384 /* TestsHelper.swift in Sources */,
+				205F58B91FD0A43200495384 /* M3U8ManagerTests.swift in Sources */,
+				205F58B61FD0A43200495384 /* M3U8ParserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F583E1FD09E0100495384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205F58A91FD0A3FC00495384 /* Tag.swift in Sources */,
+				205F58AF1FD0A3FC00495384 /* M3U8Parser.swift in Sources */,
+				205F589A1FD0A3FC00495384 /* MasterPlaylist.swift in Sources */,
+				205F58971FD0A3FC00495384 /* M3U8Manager.swift in Sources */,
+				205F58AC1FD0A3FC00495384 /* PlaylistOperation.swift in Sources */,
+				205F58A61FD0A3FC00495384 /* Tags.swift in Sources */,
+				205F58A01FD0A3FC00495384 /* MediaPlaylist.swift in Sources */,
+				205F58941FD0A3FC00495384 /* PlaylistFetcher.swift in Sources */,
+				205F589D1FD0A3FC00495384 /* Playlist.swift in Sources */,
+				205F58A31FD0A3FC00495384 /* BaseTag.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F58471FD09E0200495384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205F58BD1FD0A43200495384 /* TestsHelper.swift in Sources */,
+				205F58BA1FD0A43200495384 /* M3U8ManagerTests.swift in Sources */,
+				205F58B71FD0A43200495384 /* M3U8ParserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F585A1FD09E2300495384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205F58AA1FD0A3FC00495384 /* Tag.swift in Sources */,
+				205F58B01FD0A3FC00495384 /* M3U8Parser.swift in Sources */,
+				205F589B1FD0A3FC00495384 /* MasterPlaylist.swift in Sources */,
+				205F58981FD0A3FC00495384 /* M3U8Manager.swift in Sources */,
+				205F58AD1FD0A3FC00495384 /* PlaylistOperation.swift in Sources */,
+				205F58A71FD0A3FC00495384 /* Tags.swift in Sources */,
+				205F58A11FD0A3FC00495384 /* MediaPlaylist.swift in Sources */,
+				205F58951FD0A3FC00495384 /* PlaylistFetcher.swift in Sources */,
+				205F589E1FD0A3FC00495384 /* Playlist.swift in Sources */,
+				205F58A41FD0A3FC00495384 /* BaseTag.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205F58631FD09E2400495384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205F58BE1FD0A43200495384 /* TestsHelper.swift in Sources */,
+				205F58BB1FD0A43200495384 /* M3U8ManagerTests.swift in Sources */,
+				205F58B81FD0A43200495384 /* M3U8ParserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		205F58321FD09DB500495384 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 205F58251FD09DB500495384 /* GoSwiftyM3U8-iOS */;
+			targetProxy = 205F58311FD09DB500495384 /* PBXContainerItemProxy */;
+		};
+		205F584E1FD09E0200495384 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 205F58421FD09E0100495384 /* GoSwiftyM3U8-tvOS */;
+			targetProxy = 205F584D1FD09E0200495384 /* PBXContainerItemProxy */;
+		};
+		205F586A1FD09E2400495384 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 205F585E1FD09E2300495384 /* GoSwiftyM3U8-macOS */;
+			targetProxy = 205F58691FD09E2400495384 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		205F581F1FD09CE600495384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+			};
+			name = Debug;
+		};
+		205F58201FD09CE600495384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+			};
+			name = Release;
+		};
+		205F58391FD09DB500495384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sources/Support Files/info-iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goswifty.$(PROJECT_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		205F583A1FD09DB500495384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sources/Support Files/info-iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goswifty.$(PROJECT_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		205F583C1FD09DB500495384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sources/Support Files/info-iOSTests.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goswifty.GoSwiftyM3U8-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		205F583D1FD09DB500495384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sources/Support Files/info-iOSTests.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goswifty.GoSwiftyM3U8-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		205F58551FD09E0200495384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sources/Support Files/info-tvOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goswifty.$(PROJECT_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		205F58561FD09E0200495384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sources/Support Files/info-tvOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goswifty.$(PROJECT_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.1;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		205F58581FD09E0200495384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sources/Support Files/info-tvOSTests.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goswifty.GoSwiftyM3U8-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Debug;
+		};
+		205F58591FD09E0200495384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sources/Support Files/info-tvOSTests.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goswifty.GoSwiftyM3U8-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		205F58711FD09E2400495384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sources/Support Files/info-macOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goswifty.$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		205F58721FD09E2400495384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sources/Support Files/info-macOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goswifty.$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		205F58741FD09E2400495384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sources/Support Files/info-macOSTests.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goswifty.GoSwiftyM3U8-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		205F58751FD09E2400495384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Sources/Support Files/info-macOSTests.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goswifty.GoSwiftyM3U8-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		205F581E1FD09CE600495384 /* Build configuration list for PBXProject "GoSwiftyM3U8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				205F581F1FD09CE600495384 /* Debug */,
+				205F58201FD09CE600495384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		205F58381FD09DB500495384 /* Build configuration list for PBXNativeTarget "GoSwiftyM3U8-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				205F58391FD09DB500495384 /* Debug */,
+				205F583A1FD09DB500495384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		205F583B1FD09DB500495384 /* Build configuration list for PBXNativeTarget "GoSwiftyM3U8-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				205F583C1FD09DB500495384 /* Debug */,
+				205F583D1FD09DB500495384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		205F58541FD09E0200495384 /* Build configuration list for PBXNativeTarget "GoSwiftyM3U8-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				205F58551FD09E0200495384 /* Debug */,
+				205F58561FD09E0200495384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		205F58571FD09E0200495384 /* Build configuration list for PBXNativeTarget "GoSwiftyM3U8-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				205F58581FD09E0200495384 /* Debug */,
+				205F58591FD09E0200495384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		205F58701FD09E2400495384 /* Build configuration list for PBXNativeTarget "GoSwiftyM3U8-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				205F58711FD09E2400495384 /* Debug */,
+				205F58721FD09E2400495384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		205F58731FD09E2400495384 /* Build configuration list for PBXNativeTarget "GoSwiftyM3U8-macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				205F58741FD09E2400495384 /* Debug */,
+				205F58751FD09E2400495384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 205F581B1FD09CE600495384 /* Project object */;
+}

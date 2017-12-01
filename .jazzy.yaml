@@ -1,0 +1,14 @@
+author: GoSwifty
+author_url: "https://github.com/gal-orlanczyk"
+github_url: "https://github.com/gal-orlanczyk/GoSwiftyM3U8"
+# github_file_prefix used for showing "Show in Github" links, must be same repo used for the docs generation.
+github_file_prefix: "https://github.com/gal-orlanczyk/GoSwiftyM3U8/tree/master"
+copyright: "Copyright © 2017 Gal Orlanczyk All Rights Reserved."
+clean: true
+theme: fullwidth
+
+exclude: [Tests/]
+xcodebuild_arguments: [-workspace, "GoSwiftyM3U8.xcodeproj", -scheme, GoSwiftyM3U8-iOS]
+output: Docs/API/
+
+ 
