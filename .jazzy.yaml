@@ -8,7 +8,6 @@ clean: true
 theme: fullwidth
 
 exclude: [Tests/]
-xcodebuild_arguments: [-workspace, "GoSwiftyM3U8.xcodeproj", -scheme, GoSwiftyM3U8-iOS]
-output: Docs/API/
+output: docs/API/
 
  

@@ -1,0 +1,28 @@
+language: objective-c
+xcode_project: GoSwiftyM3U8.xcodeproj # path to your xcodeproj folder
+xcode_scheme: 
+  - GoSwiftyM3U8-iOSTests
+  - GoSwiftyM3U8-tvOSTests
+  - GoSwiftyM3U8-macOSTests
+
+matrix:
+  include:
+    - xcode_scheme: GoSwiftyM3U8-iOSTests
+      xcode_sdk: iphonesimulator11.1
+    - xcode_scheme: GoSwiftyM3U8-tvOSTests
+      xcode_sdk: tvos9.0
+    - xcode_scheme: GoSwiftyM3U8-macOSTests
+      xcode_sdk: macosx10.11
+
+before_install:
+  - gem install jazzy
+
+script:
+  - ./scripts/jazzy_update.sh # apple docs generatio script
+
+notifications:
+  email:
+    recipients:
+      - gal.orlanczyk@outlook.com
+    on_success: change
+    on_failure: always
