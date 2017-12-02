@@ -16,9 +16,10 @@ matrix:
 
 before_install:
   - gem install jazzy
+  - chmod +x ./scripts/jazzy_update.sh
 
 script:
-  - ./scripts/jazzy_update.sh # apple docs generatio script
+  - ./scripts/jazzy_update.sh # apple docs generation script
 
 notifications:
   email:
