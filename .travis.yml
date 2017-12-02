@@ -1,9 +1,5 @@
 language: objective-c
 xcode_project: GoSwiftyM3U8.xcodeproj # path to your xcodeproj folder
-xcode_scheme: 
-  - GoSwiftyM3U8-iOSTests
-  - GoSwiftyM3U8-tvOSTests
-  - GoSwiftyM3U8-macOSTests
 
 matrix:
   include:
