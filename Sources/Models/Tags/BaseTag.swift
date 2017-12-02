@@ -26,10 +26,14 @@ import Foundation
 /************************************************************/
 
 public class BaseTag: Tag {
-    public class var tag: String { fatalError("Abstract class make sure to implement tag in subclass") }
-    
+    /// The tag itself, for example: '#EXTM3U'
+    public class var tag: String { fatalError("Abstract implementation make sure to implement tag in subclass") }
+    /// The text string of the line (the actual original data for each line)
     public let text: String
+    /// The tag text data - all of the text after the tag.
+    /// For example: '#EXTINF:4.458667,' tagDataText = '4.458667,'
     public let tagDataText: String
+    /// The tag type, used to help subclass of base tags to identify the real type of the object.
     public let tagType: Tag.Type
     
     public required init(text: String, tagType: Tag.Type, extraParams: [String: Any]?) throws {
@@ -55,11 +59,16 @@ extension Double: StringInitializable {}
 /************************************************************/
 
 public class BaseValueTag<T: StringInitializable>: Tag {
+    /// The tag itself, for example: '#EXTM3U'
     public class var tag: String { fatalError("Abstract implementation make sure to implement tag in subclass") }
-    
+    /// The text string of the line (the actual original data for each line)
     public let text: String
+    /// The tag text data - all of the text after the tag.
+    /// For example: '#EXTINF:4.458667,' tagDataText = '4.458667,'
     public let tagDataText: String
+    /// The tag type, used to help subclass of base tags to identify the real type of the object.
     public let tagType: Tag.Type
+    /// The value of the tag in the type provided.
     public let value: T
 
     public required init(text: String, tagType: Tag.Type, extraParams: [String: Any]?) throws {
@@ -80,11 +89,16 @@ public class BaseValueTag<T: StringInitializable>: Tag {
 /************************************************************/
 
 public class BaseAttributedTag: AttributedTag {
+    /// The tag itself, for example: '#EXTM3U'
     public class var tag: String { fatalError("Abstract implementation make sure to implement tag in subclass") }
-    
+    /// The text string of the line (the actual original data for each line)
     public let text: String
+    /// The tag text data - all of the text after the tag.
+    /// For example: '#EXTINF:4.458667,' tagDataText = '4.458667,'
     public let tagDataText: String
+    /// The tag type, used to help subclass of base tags to identify the real type of the object.
     public let tagType: Tag.Type
+    /// The attributes of the tag.
     public let attributes: [String: String]
     
     public required init(text: String, tagType: Tag.Type, extraParams: [String: Any]?) throws {

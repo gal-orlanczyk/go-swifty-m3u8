@@ -22,6 +22,7 @@ import Foundation
 /// The parser can be used multiple times, **but make sure to reset the state**.
 public class M3U8Parser {
     
+    /// `M3U8Parser` required params
     public struct Params {
         let playlist: String
         let playlistType: PlaylistType
@@ -34,8 +35,11 @@ public class M3U8Parser {
         }
     }
     
+    /// `M3U8Parser` extra params
     public struct ExtraParams {
-        let customRequiredTags: [Tag.Type]?
+        /// Custom handled tags to be used when searching for a match in the playlist.
+        /// Can be used to match less/more tags than the default handled.
+        let customHandledTags: [Tag.Type]?
         let extraTags: [Tag.Type]?
         /// post processing on a line, receiving an array of lines and returning an array of lines, must be of equal size!
         /// use this in case you need to change attributes or data inside some of the tags.
@@ -43,7 +47,7 @@ public class M3U8Parser {
         let linePostProcessHandler: (([String]) -> [String])?
         
         init(customRequiredTags: [Tag.Type]? = nil, extraTypes: [Tag.Type]? = nil, linePostProcessHandler: (([String]) -> [String])? = nil) {
-            self.customRequiredTags = customRequiredTags
+            self.customHandledTags = customRequiredTags
             self.extraTags = extraTypes
             self.linePostProcessHandler = linePostProcessHandler
         }
@@ -75,7 +79,7 @@ public class M3U8Parser {
         // we checked the first row, update line index
         lineIndex += 1
         
-        let tagTypes: [Tag.Type] = extraParams?.customRequiredTags ?? params.playlistType.handledTagTypes
+        let tagTypes: [Tag.Type] = extraParams?.customHandledTags ?? params.playlistType.handledTagTypes
         
         // remove duplications from extra types
         var extraTypes = extraParams?.extraTags ?? []

@@ -17,50 +17,32 @@
 
 import Foundation
 
-/************************************************************/
-// MARK: - EXTM3U
-/************************************************************/
-
+/// Repesents `EXTM3U` tag.
 public class EXTM3U: BaseTag {
     override public class var tag: String { return "#EXTM3U" }
 }
 
-/************************************************************/
-// MARK: - EXT-X-INDEPENDENT-SEGMENTS
-/************************************************************/
-
+/// Repesents `EXT-X-INDEPENDENT-SEGMENTS` tag.
 public class EXT_X_INDEPENDENT_SEGMENTS: BaseTag {
     override public class var tag: String { return "#EXT-X-INDEPENDENT-SEGMENTS" }
 }
 
-/************************************************************/
-// MARK: - EXT-X-TARGETDURATION
-/************************************************************/
-
+/// Repesents `EXT-X-TARGETDURATION` tag.
 public class EXT_X_TARGETDURATION: BaseValueTag<Int> {
     override public class var tag: String { return "#EXT-X-TARGETDURATION:" }
 }
 
-/************************************************************/
-// MARK: - EXT-X-VERSION
-/************************************************************/
-
+/// Repesents `EXT-X-VERSION` tag.
 public class EXT_X_VERSION: BaseValueTag<Int> {
     override public class var tag: String { return "#EXT-X-VERSION:" }
 }
 
-/************************************************************/
-// MARK: - EXT-X-MEDIA-SEQUENCE
-/************************************************************/
-
+/// Repesents `EXT-X-MEDIA-SEQUENCE` tag.
 public class EXT_X_MEDIA_SEQUENCE: BaseValueTag<Int> {
     override public class var tag: String { return "#EXT-X-MEDIA-SEQUENCE:" }
 }
 
-/************************************************************/
-// MARK: - EXT-X-PLAYLIST-TYPE
-/************************************************************/
-
+/// Repesents a type with vod/event options.
 public enum PlaylistTagType: String , StringInitializable {
     
     case vod = "VOD", event = "EVENT"
@@ -70,14 +52,12 @@ public enum PlaylistTagType: String , StringInitializable {
     }
 }
 
+/// Repesents `EXT-X-PLAYLIST-TYPE` tag.
 public class EXT_X_PLAYLIST_TYPE: BaseValueTag<PlaylistTagType> {
     override public class var tag: String { return "#EXT-X-PLAYLIST-TYPE:" }
 }
 
-/************************************************************/
-// MARK: - EXT-X-ALLOW-CACHE
-/************************************************************/
-
+/// Repesents a type with yes/no options.
 public enum BoolTagType: String, StringInitializable {
     case yes = "YES", no = "NO"
     
@@ -86,22 +66,17 @@ public enum BoolTagType: String, StringInitializable {
     }
 }
 
+/// Repesents `EXT-X-ALLOW-CACHE` tag.
 public class EXT_X_ALLOW_CACHE: BaseValueTag<BoolTagType> {
     override public class var tag: String { return "#EXT-X-ALLOW-CACHE:" }
 }
 
-/************************************************************/
-// MARK: - EXT-X-BITRATE
-/************************************************************/
-
+/// Repesents `EXT-X-BITRATE` tag.
 public class EXT_X_BITRATE: BaseValueTag<Int> {
     override public class var tag: String { return "#EXT-X-BITRATE:" }
 }
 
-/************************************************************/
-// MARK: - EXTINF
-/************************************************************/
-
+/// Repesents `EXTINF` tag.
 public class EXTINF: BaseValueTag<Double>, MultilineTag {
     override public class var tag: String { return "#EXTINF:" }
     
@@ -145,10 +120,7 @@ public class EXTINF: BaseValueTag<Double>, MultilineTag {
     }
 }
 
-/************************************************************/
-// MARK: - EXT-X-KEY
-/************************************************************/
-
+/// Repesents `EXT-X-KEY` tag.
 public class EXT_X_KEY: BaseAttributedTag {
     override public class var tag: String { return "#EXT-X-KEY:" }
     
@@ -174,10 +146,7 @@ public class EXT_X_KEY: BaseAttributedTag {
     }
 }
 
-/************************************************************/
-// MARK: - EXT-X-STREAM-INF
-/************************************************************/
-
+/// Repesents `EXT-X-STREAM-INF` tag.
 public class EXT_X_STREAM_INF: BaseAttributedTag, MultilineTag {
     override public class var tag: String { return "#EXT-X-STREAM-INF:" }
     
@@ -225,13 +194,10 @@ public class EXT_X_STREAM_INF: BaseAttributedTag, MultilineTag {
     }
 }
 
-/************************************************************/
-// MARK: - EXT-X-MEDIA
-/************************************************************/
-
+/// Repesents `EXT-X-MEDIA` tag.
 public class EXT_X_MEDIA: BaseAttributedTag {
     override public class var tag: String { return "#EXT-X-MEDIA:" }
-    
+    /// Media type of `EXT-X-MEDIA` tag (audio/video/subtitles/cc/invalid)
     public enum MediaType: String {
         case audio = "AUDIO", video = "VIDEO", subtitles = "SUBTITLES", closedCaptions = "CLOSED-CAPTIONS", invalid
         

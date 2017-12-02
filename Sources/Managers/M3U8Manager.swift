@@ -63,7 +63,6 @@ public class M3U8Manager {
     // MARK: - Public Implementation
     /************************************************************/
     
-    
     /// Fetches and parses a single playlist object.
     /// Returns a general playlist cast according to the type you requested.
     ///

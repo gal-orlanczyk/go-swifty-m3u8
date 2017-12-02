@@ -17,8 +17,10 @@
 
 import Foundation
 
+/// `PlaylistOperation` operation handles fetching and parsing a single playlist object.
 public class PlaylistOperation: Operation {
     
+    /// `PlaylistOperation` required params
     public struct Params {
         let fetcher: PlaylistFetcher
         let url: URL
@@ -31,14 +33,18 @@ public class PlaylistOperation: Operation {
         }
     }
     
+    /// `PlaylistOperation` extra params
     public struct ExtraParams {
         let parser: M3U8Parser.ExtraParams?
     }
     
+    /// Required params
     let params: PlaylistOperation.Params
+    /// Extra params
     let extraParams: PlaylistOperation.ExtraParams?
-    
+    /// Error object, will be available only if the operation will failed because of an error.
     var error: Error? = nil
+    /// The results of operation
     var result: M3U8Parser.ParserResult? = nil
     
     init(params: PlaylistOperation.Params, extraParams: PlaylistOperation.ExtraParams? = nil) {
@@ -47,6 +53,7 @@ public class PlaylistOperation: Operation {
     }
     
     public override func main() {
+        
         if self.isCancelled { return }
         
         let playlistResult = self.params.fetcher.fetchPlaylist(from: self.params.url, timeoutInterval: 15)
@@ -59,7 +66,7 @@ public class PlaylistOperation: Operation {
             do {
                 let baseUrl = self.params.url.deletingLastPathComponent()
                 let parserParams = M3U8Parser.Params(playlist: playlist, playlistType: self.params.playlistType, baseUrl: baseUrl)
-                let extraParams = M3U8Parser.ExtraParams(customRequiredTags: self.extraParams?.parser?.customRequiredTags,
+                let extraParams = M3U8Parser.ExtraParams(customRequiredTags: self.extraParams?.parser?.customHandledTags,
                                                          extraTypes: self.extraParams?.parser?.extraTags,
                                                          linePostProcessHandler: self.extraParams?.parser?.linePostProcessHandler)
                 self.result = try parser.parse(params: parserParams, extraParams: extraParams)
