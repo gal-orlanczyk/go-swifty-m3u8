@@ -214,9 +214,112 @@
         <section class="section">
           <div class="section-content">
             
-            <h1 id='goswiftym3u8' class='heading'>GoSwiftyM3U8</h1>
+            <p><a href="https://travis-ci.org/gal-orlanczyk/go-swifty-m3u8.svg?branch=master"><img src="https://travis-ci.org/gal-orlanczyk/go-swifty-m3u8.svg?branch=master" alt="Build Status"></a>
+<a href="swift.org"><img src="https://img.shields.io/badge/Swift-4-orange.svg?style=flat" alt="badge-language"></a>
+<a href="swift.org"><img src="https://img.shields.io/badge/Platforms-macOS%20%7C%20iOS%20%7C%20tvOS-lightgray.svg?style=flat" alt="badge-platforms"></a>
+<a href="https://github.com/gal-orlanczyk/go-swifty-m3u8/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat" alt="badge-license"></a>
+<a href="https://cocoapods.org/pods/GoSwiftyM3U8"><img src="https://img.shields.io/cocoapods/v/GoSwiftyM3U8.svg?style=flat" alt="badge-cocoapods"></a>
+<a href="https://gal-orlanczyk.github.io/go-swifty-m3u8/API"><img src="docs/API/badge.svg" alt="badge-documentation"></a></p>
+<h1 id='goswiftym3u8' class='heading'>GoSwiftyM3U8</h1>
 
 <p>M3U8 Framework for parsing and handling .m3u8 index files</p>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='a-href-https-cocoapods-org-pods-goswiftym3u8-cocoapods-a' class='heading'><a href="https://cocoapods.org/pods/GoSwiftyM3U8">Cocoapods</a></h3>
+
+<p>Use something like the following in your <code>Podfile</code> (some adjustments might be needed depending on the case).</p>
+<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/CocoaPods/Specs.git'</span>
+<span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'8.0'</span>
+<span class="n">use_frameworks!</span>
+
+<span class="n">pod</span> <span class="s1">'GoSwiftyM3U8'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0.0'</span>
+</code></pre>
+
+<p>Afterwards run <code>pod install</code> from the terminal in the same folder of the <code>Podfile</code> (for details of the installation and usage of CocoaPods, visit <a href="https://cocoapods.org">it&rsquo;s official web site</a>).</p>
+
+<p>It is possible to have multiple pods with different versions of Swift, this might force you to add post install handling in your <code>Podfile</code>.</p>
+<h2 id='usage-guide' class='heading'>Usage Guide</h2>
+
+<p>For technical docs please see <a href="https://gal-orlanczyk.github.io/go-swifty-m3u8/API">API</a>
+Here are some basic usage examples of framework, there are 2 main ways for using the framework:</p>
+
+<ol>
+<li>Fetching the playlist text on your own and use only the parser.</li>
+<li>Use <code><a href="Classes/M3U8Manager.html">M3U8Manager</a></code> to fetch and parse the playlist (a custom playlist fetcher can be provided if needed).</li>
+</ol>
+<h3 id='using-code-m3u8parser-code' class='heading'>Using <code><a href="Classes/M3U8Parser.html">M3U8Parser</a></code></h3>
+
+<p>A simple example of parsing a playlist:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">playlist</span> <span class="o">=</span> <span class="cm">/* your playlist text from local/remote content */</span>
+<span class="k">let</span> <span class="nv">baseUrl</span> <span class="o">=</span> <span class="cm">/* base url for the provided playlist */</span>
+<span class="k">let</span> <span class="nv">playlistType</span> <span class="o">=</span> <span class="cm">/* the type of the playlist, can be: master/video/audio/subtitles */</span>
+<span class="k">let</span> <span class="nv">parser</span> <span class="o">=</span> <span class="kt">M3U8Parser</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">params</span> <span class="o">=</span> <span class="kt">M3U8Parser</span><span class="o">.</span><span class="kt">Params</span><span class="p">(</span><span class="nv">playlist</span><span class="p">:</span> <span class="n">playlist</span><span class="p">,</span> <span class="nv">playlistType</span><span class="p">:</span> <span class="o">.</span><span class="n">master</span><span class="p">,</span> <span class="nv">baseUrl</span><span class="p">:</span> <span class="n">baseUrl</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">extraParams</span> <span class="o">=</span> <span class="kt">M3U8Parser</span><span class="o">.</span><span class="kt">ExtraParams</span><span class="p">(</span><span class="nv">customRequiredTags</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">extraTypes</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">linePostProcessHandler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span> <span class="c1">// optional</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">playlistResult</span> <span class="o">=</span> <span class="k">try</span> <span class="n">parser</span><span class="o">.</span><span class="nf">parse</span><span class="p">(</span><span class="nv">params</span><span class="p">:</span> <span class="n">params</span><span class="p">,</span> <span class="nv">extraParams</span><span class="p">:</span> <span class="n">extraParams</span><span class="p">)</span>
+    <span class="c1">// if our playlist was of type master you can unwrap the result like this:</span>
+    <span class="k">if</span> <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">master</span><span class="p">(</span><span class="n">masterPlaylist</span><span class="p">)</span> <span class="o">=</span> <span class="n">playlistResult</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// use masterPlaylist</span>
+    <span class="p">}</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+    <span class="c1">// handle error</span>
+<span class="p">}</span>            
+</code></pre>
+
+<p>Additional Info:</p>
+
+<ul>
+<li>The parser is synchronous meaning if you want it on a background queue you will need to handle it.</li>
+<li>The parser can be cancelled but because it is synchronous to be able to cancel the call to <code>parse()</code> must be async.</li>
+<li>You can reuse the parser object to parser multiple list synchronously.</li>
+</ul>
+<h3 id='using-code-m3u8manager-code' class='heading'>Using <code><a href="Classes/M3U8Manager.html">M3U8Manager</a></code></h3>
+
+<p><code><a href="Classes/M3U8Manager.html">M3U8Manager</a></code> can fetch and parse single playlist or multiple ones, only media playlists for multiple because we must have master playlist before fetching media playlists.
+You can also cancel all manager tasks using <code>cancel()</code>.</p>
+
+<p>Single playlist handling:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">manager</span> <span class="o">=</span> <span class="kt">M3U8Manager</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">playlistFetcher</span> <span class="o">=</span> <span class="cm">/* You can use a custom playlist fetcher or nil to use the default one */</span>
+<span class="k">let</span> <span class="nv">params</span> <span class="o">=</span> <span class="kt">PlaylistOperation</span><span class="o">.</span><span class="kt">Params</span><span class="p">(</span><span class="nv">fetcher</span><span class="p">:</span> <span class="n">playlistFetcher</span><span class="p">,</span> <span class="nv">url</span><span class="p">:</span> <span class="n">playlistUrl</span><span class="p">,</span> <span class="nv">playlistType</span><span class="p">:</span> <span class="n">playlistType</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">parserExtraParams</span> <span class="o">=</span> <span class="kt">M3U8Parser</span><span class="o">.</span><span class="kt">ExtraParams</span><span class="p">(</span><span class="nv">customRequiredTags</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">extraTypes</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">linePostProcessHandler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span> <span class="c1">// optional</span>
+<span class="k">let</span> <span class="nv">extraParams</span> <span class="o">=</span> <span class="kt">PlaylistOperation</span><span class="o">.</span><span class="kt">ExtraParams</span><span class="p">(</span><span class="nv">parser</span><span class="p">:</span> <span class="n">parserExtraParams</span><span class="p">)</span> <span class="c1">// optional</span>
+<span class="k">let</span> <span class="nv">operationData</span> <span class="o">=</span> <span class="kt">M3U8Manager</span><span class="o">.</span><span class="kt">PlaylistOperationData</span><span class="p">(</span><span class="nv">params</span><span class="p">:</span> <span class="n">params</span><span class="p">,</span> <span class="nv">extraParams</span><span class="p">:</span> <span class="n">extraParams</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">playlistType</span> <span class="o">=</span> <span class="cm">/* the type of the playlist from the result (can be MasterPlaylist.self/MediaPlaylist.self) */</span>
+<span class="n">manager</span><span class="o">.</span><span class="nf">fetchAndParsePlaylist</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">operationData</span><span class="p">,</span> <span class="nv">playlistType</span><span class="p">:</span> <span class="n">playlistType</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">switch</span> <span class="n">result</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="k">let</span> <span class="nv">playlist</span><span class="p">):</span>
+        <span class="c1">// handle playlist</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">):</span> <span class="c1">// handle the error</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nv">cancelled</span><span class="p">:</span> <span class="c1">// handle cancelled</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Multiple playlists:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">manager</span> <span class="o">=</span> <span class="kt">M3U8Manager</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">playlistFetcher</span> <span class="o">=</span> <span class="cm">/* You can use a custom playlist fetcher or nil to use the default one */</span>
+
+<span class="k">let</span> <span class="nv">params1</span> <span class="o">=</span> <span class="kt">PlaylistOperation</span><span class="o">.</span><span class="kt">Params</span><span class="p">(</span><span class="nv">fetcher</span><span class="p">:</span> <span class="n">playlistFetcher</span><span class="p">,</span> <span class="nv">url</span><span class="p">:</span> <span class="n">firstUrl</span><span class="p">,</span> <span class="nv">playlistType</span><span class="p">:</span> <span class="n">playlistType</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">parserExtraParams1</span> <span class="o">=</span> <span class="kt">M3U8Parser</span><span class="o">.</span><span class="kt">ExtraParams</span><span class="p">(</span><span class="nv">customRequiredTags</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">extraTypes</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">linePostProcessHandler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">extraParams1</span> <span class="o">=</span> <span class="kt">PlaylistOperation</span><span class="o">.</span><span class="kt">ExtraParams</span><span class="p">(</span><span class="nv">parser</span><span class="p">:</span> <span class="n">parserExtraParams1</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">operationData1</span> <span class="o">=</span> <span class="kt">M3U8Manager</span><span class="o">.</span><span class="kt">PlaylistOperationData</span><span class="p">(</span><span class="nv">params</span><span class="p">:</span> <span class="n">params1</span><span class="p">,</span> <span class="nv">extraParams</span><span class="p">:</span> <span class="n">extraParams1</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">params2</span> <span class="o">=</span> <span class="kt">PlaylistOperation</span><span class="o">.</span><span class="kt">Params</span><span class="p">(</span><span class="nv">fetcher</span><span class="p">:</span> <span class="n">playlistFetcher</span><span class="p">,</span> <span class="nv">url</span><span class="p">:</span> <span class="n">secondUrl</span><span class="p">,</span> <span class="nv">playlistType</span><span class="p">:</span> <span class="n">playlistType</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">parserExtraParams2</span> <span class="o">=</span> <span class="kt">M3U8Parser</span><span class="o">.</span><span class="kt">ExtraParams</span><span class="p">(</span><span class="nv">customRequiredTags</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">extraTypes</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">linePostProcessHandler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">extraParams2</span> <span class="o">=</span> <span class="kt">PlaylistOperation</span><span class="o">.</span><span class="kt">ExtraParams</span><span class="p">(</span><span class="nv">parser</span><span class="p">:</span> <span class="n">parserExtraParams2</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">operationData2</span> <span class="o">=</span> <span class="kt">M3U8Manager</span><span class="o">.</span><span class="kt">PlaylistOperationData</span><span class="p">(</span><span class="nv">params</span><span class="p">:</span> <span class="n">params2</span><span class="p">,</span> <span class="nv">extraParams</span><span class="p">:</span> <span class="n">extraParams2</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">operationsData</span> <span class="o">=</span> <span class="p">[</span><span class="n">operationData1</span><span class="p">,</span> <span class="n">operationData2</span><span class="p">]</span>
+<span class="n">manager</span><span class="o">.</span><span class="nf">fetchAndParseMediaPlaylists</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">operationsData</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">switch</span> <span class="n">result</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="k">let</span> <span class="nv">playlists</span><span class="p">):</span>
+        <span class="c1">// handle playlists</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">):</span> <span class="c1">// handle the error</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nv">cancelled</span><span class="p">:</span> <span class="c1">// handle cancelled</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 
           </div>
         </section>

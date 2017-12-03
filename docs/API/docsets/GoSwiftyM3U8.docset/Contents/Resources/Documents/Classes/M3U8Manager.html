@@ -326,7 +326,7 @@ and its functionality can be mimiced by using the <code><a href="../Classes/M3U8
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/gal-orlanczyk/GoSwiftyM3U8/tree/master/Sources/Managers/M3U8Manager.swift#L52-L60">Show on GitHub</a>
+                        <a href="https://github.com/gal-orlanczyk/GoSwiftyM3U8/tree/master/Sources/Managers/M3U8Manager.swift#L52-L62">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -345,9 +345,9 @@ and its functionality can be mimiced by using the <code><a href="../Classes/M3U8
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12GoSwiftyM3U80cD7ManagerC21fetchAndParsePlaylistyAC0I13OperationDataV4from_yAA0iJ0CcSg16operationHandleryAC6ResultOy_AA0I0_pGc010completionN0tF"></a>
-                    <a name="//apple_ref/swift/Method/fetchAndParsePlaylist(from:operationHandler:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12GoSwiftyM3U80cD7ManagerC21fetchAndParsePlaylistyAC0I13OperationDataV4from_yAA0iJ0CcSg16operationHandleryAC6ResultOy_AA0I0_pGc010completionN0tF">fetchAndParsePlaylist(from:operationHandler:completionHandler:)</a>
+                    <a name="/s:12GoSwiftyM3U80cD7ManagerC21fetchAndParsePlaylistyAC0I13OperationDataV4from_xm12playlistTypeyAA0iJ0CcSg16operationHandleryAC6ResultOy_xGc010completionP0tAA0I0RzlF"></a>
+                    <a name="//apple_ref/swift/Method/fetchAndParsePlaylist(from:playlistType:operationHandler:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12GoSwiftyM3U80cD7ManagerC21fetchAndParsePlaylistyAC0I13OperationDataV4from_xm12playlistTypeyAA0iJ0CcSg16operationHandleryAC6ResultOy_xGc010completionP0tAA0I0RzlF">fetchAndParsePlaylist(from:playlistType:operationHandler:completionHandler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -363,9 +363,9 @@ Returns a general playlist cast according to the type you requested.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchAndParsePlaylist</span><span class="p">(</span><span class="n">from</span> <span class="nv">operationData</span><span class="p">:</span> <span class="kt"><a href="../Classes/M3U8Manager.html#/s:12GoSwiftyM3U80cD7ManagerC21PlaylistOperationDataV">PlaylistOperationData</a></span><span class="p">,</span>
-                                  <span class="nv">operationHandler</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Classes/PlaylistOperation.html">PlaylistOperation</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-                                  <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">M3U8Manager</span><span class="o">.</span><span class="kt"><a href="../Classes/M3U8Manager/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Playlist.html">Playlist</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">fetchAndParsePlaylist</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Playlist.html">Playlist</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">from</span> <span class="nv">operationData</span><span class="p">:</span> <span class="kt"><a href="../Classes/M3U8Manager.html#/s:12GoSwiftyM3U80cD7ManagerC21PlaylistOperationDataV">PlaylistOperationData</a></span><span class="p">,</span> <span class="nv">playlistType</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+                                               <span class="nv">operationHandler</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Classes/PlaylistOperation.html">PlaylistOperation</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                               <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">M3U8Manager</span><span class="o">.</span><span class="kt"><a href="../Classes/M3U8Manager/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -382,6 +382,18 @@ Returns a general playlist cast according to the type you requested.</p>
                               <td>
                                 <div>
                                   <p>The data params neeeded to make the request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>playlistType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The playlist type to to return in the result. used to save extra casting.</p>
                                 </div>
                               </td>
                             </tr>
@@ -414,7 +426,7 @@ can be used to cancel the request for example.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/gal-orlanczyk/GoSwiftyM3U8/tree/master/Sources/Managers/M3U8Manager.swift#L74-L96">Show on GitHub</a>
+                        <a href="https://github.com/gal-orlanczyk/GoSwiftyM3U8/tree/master/Sources/Managers/M3U8Manager.swift#L77-L103">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -490,7 +502,7 @@ can be used to cancel a single/multiple request/s for example.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/gal-orlanczyk/GoSwiftyM3U8/tree/master/Sources/Managers/M3U8Manager.swift#L105-L154">Show on GitHub</a>
+                        <a href="https://github.com/gal-orlanczyk/GoSwiftyM3U8/tree/master/Sources/Managers/M3U8Manager.swift#L112-L159">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -520,7 +532,7 @@ can be used to cancel a single/multiple request/s for example.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/gal-orlanczyk/GoSwiftyM3U8/tree/master/Sources/Managers/M3U8Manager.swift#L157-L161">Show on GitHub</a>
+                        <a href="https://github.com/gal-orlanczyk/GoSwiftyM3U8/tree/master/Sources/Managers/M3U8Manager.swift#L162-L166">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

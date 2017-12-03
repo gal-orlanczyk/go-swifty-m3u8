@@ -43,6 +43,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Managers/M3U8Manager.swift",
+      "line": 54,
+      "symbol": "M3U8Manager.Error.invalidType",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Playlist/MasterPlaylist.swift",
       "line": 26,
       "symbol": "MasterPlaylist.tags",
