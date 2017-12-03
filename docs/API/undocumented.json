@@ -1,0 +1,320 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Managers/M3U8Manager.swift",
+      "line": 22,
+      "symbol": "Result.success",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Managers/M3U8Manager.swift",
+      "line": 23,
+      "symbol": "Result.failure",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Managers/M3U8Manager.swift",
+      "line": 40,
+      "symbol": "M3U8Manager.Result.success",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Managers/M3U8Manager.swift",
+      "line": 41,
+      "symbol": "M3U8Manager.Result.failure",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Managers/M3U8Manager.swift",
+      "line": 42,
+      "symbol": "M3U8Manager.Result.cancelled",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Managers/M3U8Manager.swift",
+      "line": 53,
+      "symbol": "M3U8Manager.Error.emptyResult",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Playlist/MasterPlaylist.swift",
+      "line": 26,
+      "symbol": "MasterPlaylist.tags",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Playlist/Playlist.swift",
+      "line": 36,
+      "symbol": "PlaylistType.master",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Playlist/Playlist.swift",
+      "line": 37,
+      "symbol": "PlaylistType.video",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Playlist/Playlist.swift",
+      "line": 38,
+      "symbol": "PlaylistType.audio",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Playlist/Playlist.swift",
+      "line": 39,
+      "symbol": "PlaylistType.subtitles",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/PlaylistOperation/PlaylistOperation.swift",
+      "line": 55,
+      "symbol": "PlaylistOperation.main()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/BaseTag.swift",
+      "line": 40,
+      "symbol": "BaseTag.init(text:tagType:extraParams:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/BaseTag.swift",
+      "line": 54,
+      "symbol": "StringInitializable.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/BaseTag.swift",
+      "line": 78,
+      "symbol": "BaseValueTag.init(text:tagType:extraParams:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/BaseTag.swift",
+      "line": 109,
+      "symbol": "BaseAttributedTag.init(text:tagType:extraParams:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tag.swift",
+      "line": 44,
+      "symbol": "PlaylistLine.init(text:tagType:extraParams:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tag.swift",
+      "line": 61,
+      "symbol": "Tag.toText(replacingTagValueWith:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tag.swift",
+      "line": 66,
+      "symbol": "Tag.toText(replacingTagValueWith:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tag.swift",
+      "line": 85,
+      "symbol": "AttributedTag",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tag.swift",
+      "line": 86,
+      "symbol": "AttributedTag.attributes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tag.swift",
+      "line": 89,
+      "symbol": "MultilineTag",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tags.swift",
+      "line": 48,
+      "symbol": "PlaylistTagType.event",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tags.swift",
+      "line": 48,
+      "symbol": "PlaylistTagType.vod",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tags.swift",
+      "line": 50,
+      "symbol": "PlaylistTagType.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tags.swift",
+      "line": 62,
+      "symbol": "BoolTagType.no",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tags.swift",
+      "line": 62,
+      "symbol": "BoolTagType.yes",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tags.swift",
+      "line": 64,
+      "symbol": "BoolTagType.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tags.swift",
+      "line": 87,
+      "symbol": "EXTINF.init(text:tagType:extraParams:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tags.swift",
+      "line": 138,
+      "symbol": "EXT_X_KEY.init(text:tagType:extraParams:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tags.swift",
+      "line": 176,
+      "symbol": "EXT_X_STREAM_INF.init(text:tagType:extraParams:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tags.swift",
+      "line": 202,
+      "symbol": "EXT_X_MEDIA.MediaType.audio",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tags.swift",
+      "line": 202,
+      "symbol": "EXT_X_MEDIA.MediaType.closedCaptions",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tags.swift",
+      "line": 202,
+      "symbol": "EXT_X_MEDIA.MediaType.invalid",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tags.swift",
+      "line": 202,
+      "symbol": "EXT_X_MEDIA.MediaType.subtitles",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tags.swift",
+      "line": 202,
+      "symbol": "EXT_X_MEDIA.MediaType.video",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Models/Tags/Tags.swift",
+      "line": 241,
+      "symbol": "EXT_X_MEDIA.init(text:tagType:extraParams:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Parser/M3U8Parser.swift",
+      "line": 267,
+      "symbol": "M3U8Parser.Error",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Parser/M3U8Parser.swift",
+      "line": 268,
+      "symbol": "M3U8Parser.Error.malformedPlaylist",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Parser/M3U8Parser.swift",
+      "line": 278,
+      "symbol": "M3U8Parser.ParserResult",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Parser/M3U8Parser.swift",
+      "line": 279,
+      "symbol": "M3U8Parser.ParserResult.master",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Parser/M3U8Parser.swift",
+      "line": 280,
+      "symbol": "M3U8Parser.ParserResult.media",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/Parser/M3U8Parser.swift",
+      "line": 281,
+      "symbol": "M3U8Parser.ParserResult.cancelled",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/PlaylistFetcher/PlaylistFetcher.swift",
+      "line": 43,
+      "symbol": "PlaylistFetcher",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8/Sources/PlaylistFetcher/PlaylistFetcher.swift",
+      "line": 50,
+      "symbol": "DefaultPlaylistFetcher",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/gal.orlanczyk/Development/MyProjects/GoSwiftyM3U8"
+}
