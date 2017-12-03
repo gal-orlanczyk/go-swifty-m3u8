@@ -57,23 +57,42 @@ class M3U8ManagerTests: XCTestCase {
         let exp = expectation(description: "async expectation")
         let playlistFetcher = MockPlaylistFetcher()
         let manager = M3U8Manager()
-        let params = PlaylistOperation.Params(fetcher: playlistFetcher, url: TestsHelper.audioPlaylistUrl, playlistType: .audio)
-        let parserExtraParams = M3U8Parser.ExtraParams(customRequiredTags: nil, extraTypes: nil, linePostProcessHandler: nil)
-        let extraParams = PlaylistOperation.ExtraParams(parser: parserExtraParams)
-        let operationData = M3U8Manager.PlaylistOperationData(params: params, extraParams: extraParams)
-        let operationsData = [operationData, operationData]
+        
+        let params1 = PlaylistOperation.Params(fetcher: playlistFetcher, url: TestsHelper.audioPlaylistUrl, playlistType: .audio)
+        let parserExtraParams1 = M3U8Parser.ExtraParams(customRequiredTags: nil, extraTypes: nil, linePostProcessHandler: nil)
+        let extraParams1 = PlaylistOperation.ExtraParams(parser: parserExtraParams1)
+        let operationData1 = M3U8Manager.PlaylistOperationData(params: params1, extraParams: extraParams1)
+        
+        let params2 = PlaylistOperation.Params(fetcher: playlistFetcher, url: TestsHelper.videoPlaylistAes128Url, playlistType: .video)
+        let parserExtraParams2 = M3U8Parser.ExtraParams(customRequiredTags: nil, extraTypes: nil, linePostProcessHandler: nil)
+        let extraParams2 = PlaylistOperation.ExtraParams(parser: parserExtraParams2)
+        let operationData2 = M3U8Manager.PlaylistOperationData(params: params2, extraParams: extraParams2)
+        
+        let operationsData = [operationData1, operationData2]
         manager.fetchAndParseMediaPlaylists(from: operationsData) { (result) in
             switch result {
             case .success(let playlists):
                 XCTAssertEqual(playlists.count, operationsData.count)
                 for mediaPlaylist in playlists {
-                    XCTAssertEqual(mediaPlaylist.tags.versionTag?.value, 3)
-                    XCTAssertEqual(mediaPlaylist.tags.targetDurationTag.value, 6)
-                    XCTAssertEqual(mediaPlaylist.tags.playlistTypeTag?.value, .vod)
-                    XCTAssertEqual(mediaPlaylist.tags.mediaSegments.count, 101)
-                    XCTAssertEqual(mediaPlaylist.tags.mediaSegments.first?.value, 5.99467)
-                    XCTAssertEqual(mediaPlaylist.tags.mediaSegments.first?.uri, "fileSequence0.aac")
-                    XCTAssertEqual(mediaPlaylist.tags.mediaSegments.last?.uri, "fileSequence100.aac")
+                    if mediaPlaylist.type == .audio {
+                        XCTAssertEqual(mediaPlaylist.tags.versionTag?.value, 3)
+                        XCTAssertEqual(mediaPlaylist.tags.targetDurationTag.value, 6)
+                        XCTAssertEqual(mediaPlaylist.tags.playlistTypeTag?.value, .vod)
+                        XCTAssertEqual(mediaPlaylist.tags.mediaSegments.count, 101)
+                        XCTAssertEqual(mediaPlaylist.tags.mediaSegments.first?.value, 5.99467)
+                        XCTAssertEqual(mediaPlaylist.tags.mediaSegments.first?.uri, "fileSequence0.aac")
+                        XCTAssertEqual(mediaPlaylist.tags.mediaSegments.last?.uri, "fileSequence100.aac")
+                    } else {
+                        XCTAssertEqual(mediaPlaylist.tags.versionTag?.value, 3)
+                        XCTAssertEqual(mediaPlaylist.tags.targetDurationTag.value, 5)
+                        XCTAssertEqual(mediaPlaylist.tags.mediaSegments.count, 149)
+                        XCTAssertEqual(mediaPlaylist.tags.keySegments.count, 149)
+                        XCTAssertEqual(mediaPlaylist.tags.keySegments.first?.method, "AES-128")
+                        XCTAssertEqual(mediaPlaylist.tags.keySegments.first?.uri, "segment-00000.key")
+                        XCTAssertEqual(mediaPlaylist.tags.mediaSegments.first?.value, 4.458667)
+                        XCTAssertEqual(mediaPlaylist.tags.mediaSegments.first?.uri, "segment-00000.ts.enc")
+                        XCTAssertEqual(mediaPlaylist.tags.mediaSegments.last?.uri, "segment-00148.ts.enc")
+                    }
                 }
                 exp.fulfill()
             case .failure(let error): XCTFail("fetch failed with error: \(String(describing: error))")
