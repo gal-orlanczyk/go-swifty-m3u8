@@ -51,10 +51,12 @@ public class M3U8Manager {
     /// The manager allowed errors
     public enum Error: LocalizedError {
         case emptyResult
+        case invalidType
         
         public var errorDescription: String? {
             switch self {
             case .emptyResult: return "Operation result returned empty"
+            case .invalidType: return "Invalid type was provided for playlist result handling"
             }
         }
     }
@@ -68,12 +70,13 @@ public class M3U8Manager {
     ///
     /// - Parameters:
     ///   - operationData: The data params neeeded to make the request.
+    ///   - playlistType: The playlist type to to return in the result. used to save extra casting.
     ///   - operationHandler: Handler for making actions on the operation performing the fetch and parse.
     ///   can be used to cancel the request for example.
     ///   - completionHandler: The completion handler to be called when finished with the result of the operation.
-    public func fetchAndParsePlaylist(from operationData: PlaylistOperationData,
-                                      operationHandler: ((PlaylistOperation) -> Void)? = nil,
-                                      completionHandler: @escaping (M3U8Manager.Result<Playlist>) -> Void) {
+    public func fetchAndParsePlaylist<T: Playlist>(from operationData: PlaylistOperationData, playlistType: T.Type,
+                                                   operationHandler: ((PlaylistOperation) -> Void)? = nil,
+                                                   completionHandler: @escaping (M3U8Manager.Result<T>) -> Void) {
         
         let playlistOperation = PlaylistOperation(params: operationData.params, extraParams: operationData.extraParams)
         playlistOperation.completionBlock = {
@@ -89,7 +92,11 @@ public class M3U8Manager {
                 completionHandler(.failure(M3U8Manager.Error.emptyResult))
                 return
             }
-            completionHandler(.success(playlist))
+            guard let playlistResult = playlist as? T else {
+                completionHandler(.failure(M3U8Manager.Error.invalidType))
+                return
+            }
+            completionHandler(.success(playlistResult))
         }
         operationHandler?(playlistOperation)
         self.operationsQueue.addOperation(playlistOperation)
@@ -114,18 +121,16 @@ public class M3U8Manager {
         var isCancelled = false
         
         for operationData in operationDataList {
-            self.fetchAndParsePlaylist(from: operationData, operationHandler: { (operation) in
+            self.fetchAndParsePlaylist(from: operationData, playlistType: MediaPlaylist.self, operationHandler: { (operation) in
                 operations.append(operation)
             }, completionHandler: { (result) in
                 defer {
                     dispatchGroup.leave()
                 }
                 switch result {
-                case .success(let playlist):
-                    if let mediaPlaylist = playlist as? MediaPlaylist {
-                        synchronizedQueue.sync {
-                            resultMediaPlaylists.append(mediaPlaylist)
-                        }
+                case .success(let mediaPlaylist):
+                    synchronizedQueue.sync {
+                        resultMediaPlaylists.append(mediaPlaylist)
                     }
                 case .failure(let e):
                     error = e

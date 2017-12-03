@@ -41,13 +41,9 @@ class M3U8ManagerTests: XCTestCase {
         let parserExtraParams = M3U8Parser.ExtraParams(customRequiredTags: nil, extraTypes: nil, linePostProcessHandler: nil)
         let extraParams = PlaylistOperation.ExtraParams(parser: parserExtraParams)
         let operationData = M3U8Manager.PlaylistOperationData(params: params, extraParams: extraParams)
-        manager.fetchAndParsePlaylist(from: operationData) { (result) in
+        manager.fetchAndParsePlaylist(from: operationData, playlistType: MasterPlaylist.self) { (result) in
             switch result {
-            case .success(let playlist):
-                guard let masterPlaylist = playlist as? MasterPlaylist else {
-                    XCTFail("playlist must be of master playlist type")
-                    return
-                }
+            case .success(let masterPlaylist):
                 TestsHelper.masterPlaylistTest(masterPlaylist: masterPlaylist)
                 exp.fulfill()
             case .failure(let error): XCTFail("fetch failed with error: \(String(describing: error))")
@@ -95,7 +91,7 @@ class M3U8ManagerTests: XCTestCase {
         let parserExtraParams = M3U8Parser.ExtraParams(customRequiredTags: nil, extraTypes: nil, linePostProcessHandler: nil)
         let extraParams = PlaylistOperation.ExtraParams(parser: parserExtraParams)
         let operationData = M3U8Manager.PlaylistOperationData(params: params, extraParams: extraParams)
-        manager.fetchAndParsePlaylist(from: operationData) { (result) in
+        manager.fetchAndParsePlaylist(from: operationData, playlistType: MasterPlaylist.self) { (result) in
             switch result {
             case .success(_): XCTFail("fetch should be cancelled")
             case .failure(_): XCTFail("fetch should be cancelled")
