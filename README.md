@@ -3,7 +3,7 @@
 [![badge-language](https://img.shields.io/badge/Swift-4-orange.svg?style=flat)](swift.org)
 [![badge-platforms](https://img.shields.io/badge/Platforms-macOS%20%7C%20iOS%20%7C%20tvOS-lightgray.svg?style=flat)](swift.org)
 [![badge-license](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)](https://github.com/gal-orlanczyk/go-swifty-m3u8/blob/master/LICENSE)
-[![badge-cocoapods](https://img.shields.io/cocoapods/v/GoSwiftyM3U8.svg?style=flat)](https://cocoapods.org/pods/PlayKit)
+[![badge-cocoapods](https://img.shields.io/cocoapods/v/GoSwiftyM3U8.svg?style=flat)](https://cocoapods.org/pods/GoSwiftyM3U8)
 [![badge-documentation](docs/API/badge.svg)](https://gal-orlanczyk.github.io/go-swifty-m3u8/API)
 
 # GoSwiftyM3U8
@@ -11,7 +11,7 @@ M3U8 Framework for parsing and handling .m3u8 index files
 
 ## Installation
 
-### [Cocoapods](https://cocoapods.org/pods/PlayKit)
+### [Cocoapods](https://cocoapods.org/pods/GoSwiftyM3U8)
 
 Use something like the following in your `Podfile` (some adjustments might be needed depending on the case).
 
