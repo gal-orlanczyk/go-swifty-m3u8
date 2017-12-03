@@ -32,9 +32,9 @@ enum TagParamsKeys {
     static let attributesKeys = "attributesKeys"
 }
 
-/************************************************************/
+/* ***********************************************************/
 // MARK: - PlaylistLine
-/************************************************************/
+/* ***********************************************************/
 
 /// `PlaylistLine` protocol represents a general line in the playlist text
 public protocol PlaylistLine {
@@ -44,9 +44,9 @@ public protocol PlaylistLine {
     init(text: String, tagType: Tag.Type, extraParams: [String: Any]?) throws
 }
 
-/************************************************************/
+/* ***********************************************************/
 // MARK: - Tag
-/************************************************************/
+/* ***********************************************************/
 
 /// `Tag` protocol represents a tag line in the playlist
 public protocol Tag: PlaylistLine {

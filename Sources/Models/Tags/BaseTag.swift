@@ -21,10 +21,11 @@ import Foundation
  Base tags used as abstract classes to implement all tag types.
  */
 
-/************************************************************/
+/* ***********************************************************/
 // MARK: - BaseTag
-/************************************************************/
+/* ***********************************************************/
 
+/// `BaseTag` represents a base tag that holds minimal tag info.
 public class BaseTag: Tag {
     /// The tag itself, for example: '#EXTM3U'
     public class var tag: String { fatalError("Abstract implementation make sure to implement tag in subclass") }
@@ -43,10 +44,12 @@ public class BaseTag: Tag {
     }
 }
 
-/************************************************************/
+/* ***********************************************************/
 // MARK: - StringInitializable
-/************************************************************/
+/* ***********************************************************/
 
+/// `StringInitializable` acts as a generic constraint for tags with value.
+/// represents all types that can be initialized with String.
 public protocol StringInitializable {
     init?(_ string: String)
 }
@@ -54,10 +57,11 @@ public protocol StringInitializable {
 extension Int: StringInitializable {}
 extension Double: StringInitializable {}
 
-/************************************************************/
+/* ***********************************************************/
 // MARK: - BaseValueTag
-/************************************************************/
+/* ***********************************************************/
 
+/// A base tag that represent tags with single value.
 public class BaseValueTag<T: StringInitializable>: Tag {
     /// The tag itself, for example: '#EXTM3U'
     public class var tag: String { fatalError("Abstract implementation make sure to implement tag in subclass") }
@@ -84,10 +88,11 @@ public class BaseValueTag<T: StringInitializable>: Tag {
     }
 }
 
-/************************************************************/
+/* ***********************************************************/
 // MARK: - BaseAttributedTag
-/************************************************************/
+/* ***********************************************************/
 
+/// A base attribute tag, the holds tag info + attributes.
 public class BaseAttributedTag: AttributedTag {
     /// The tag itself, for example: '#EXTM3U'
     public class var tag: String { fatalError("Abstract implementation make sure to implement tag in subclass") }

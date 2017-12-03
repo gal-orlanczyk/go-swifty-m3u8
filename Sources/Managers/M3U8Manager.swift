@@ -31,9 +31,9 @@ public class M3U8Manager {
     /// The operations queue all jobs of fetching + parsing will be performed on.
     let operationsQueue = OperationQueue()
     
-    /************************************************************/
+    /* ***********************************************************/
     // MARK: - Inner Types
-    /************************************************************/
+    /* ***********************************************************/
     
     /// The result of a manager action.
     public enum Result<Value> {
@@ -59,9 +59,9 @@ public class M3U8Manager {
         }
     }
     
-    /************************************************************/
+    /* ***********************************************************/
     // MARK: - Public Implementation
-    /************************************************************/
+    /* ***********************************************************/
     
     /// Fetches and parses a single playlist object.
     /// Returns a general playlist cast according to the type you requested.
@@ -160,9 +160,9 @@ public class M3U8Manager {
         }
     }
     
-    /************************************************************/
+    /* ***********************************************************/
     // MARK: - Internal Implementation
-    /************************************************************/
+    /* ***********************************************************/
     
     static func createUrl(from uri: String, using originalUrl: URL) -> URL? {
         let url: URL
