@@ -150,11 +150,11 @@ class M3U8ParserTests: XCTestCase {
         XCTAssertNotEqual(masterPlaylist.originalText, masterPlaylist.alteredText)
     }
     
-    func testParserCancelation() {
+    func testParserCancellation() {
         let exp = expectation(description: "async expectation")
         let parser = M3U8Parser()
-        let playlist = try! String.init(contentsOf: TestsHelper.masterPlaylistUrl)
-        let params = M3U8Parser.Params(playlist: playlist, playlistType: .master, baseUrl: TestsHelper.masterPlaylistUrl.deletingLastPathComponent())
+        let playlist = try! String.init(contentsOf: TestsHelper.videoPlaylistAes128Url)
+        let params = M3U8Parser.Params(playlist: playlist, playlistType: .video, baseUrl: TestsHelper.videoPlaylistAes128Url.deletingLastPathComponent())
         DispatchQueue.global().async {
             let playlistResult = try! parser.parse(params: params)
             switch playlistResult {
