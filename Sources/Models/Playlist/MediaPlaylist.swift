@@ -31,13 +31,13 @@ public struct MediaPlaylist: Playlist {
 
 /// `MediaPlaylistTags` contains media playlists tags
 public struct MediaPlaylistTags {
-    let targetDurationTag: EXT_X_TARGETDURATION
-    let allowCacheTag: EXT_X_ALLOW_CACHE?
-    let playlistTypeTag: EXT_X_PLAYLIST_TYPE?
-    let versionTag: EXT_X_VERSION?
-    let mediaSequence: EXT_X_MEDIA_SEQUENCE?
-    let mediaSegments: [EXTINF]
-    let keySegments: [EXT_X_KEY]
+    public let targetDurationTag: EXT_X_TARGETDURATION
+    public let allowCacheTag: EXT_X_ALLOW_CACHE?
+    public let playlistTypeTag: EXT_X_PLAYLIST_TYPE?
+    public let versionTag: EXT_X_VERSION?
+    public let mediaSequence: EXT_X_MEDIA_SEQUENCE?
+    public let mediaSegments: [EXTINF]
+    public let keySegments: [EXT_X_KEY]
 }
 
 /// `MediaPlaylistTagsBuilder` used to build `MediaPlaylistTags` object.

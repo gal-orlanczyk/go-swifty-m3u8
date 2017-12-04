@@ -28,8 +28,10 @@ public enum Result<Value> {
 /// and its functionality can be mimiced by using the `M3U8Parser`, `PlaylistFetcher` and other required params.
 public class M3U8Manager {
     
+    public init() {}
+    
     /// The operations queue all jobs of fetching + parsing will be performed on.
-    let operationsQueue = OperationQueue()
+    private let operationsQueue = OperationQueue()
     
     /* ***********************************************************/
     // MARK: - Inner Types
@@ -44,8 +46,13 @@ public class M3U8Manager {
     
     /// Holds the data needed to execute a playlist operation
     public struct PlaylistOperationData {
-        let params: PlaylistOperation.Params
-        let extraParams: PlaylistOperation.ExtraParams?
+        public let params: PlaylistOperation.Params
+        public let extraParams: PlaylistOperation.ExtraParams?
+        
+        public init(params: PlaylistOperation.Params, extraParams: PlaylistOperation.ExtraParams? = nil) {
+            self.params = params
+            self.extraParams = extraParams
+        }
     }
     
     /// The manager allowed errors
