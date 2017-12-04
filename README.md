@@ -29,13 +29,15 @@ It is possible to have multiple pods with different versions of Swift, this migh
 
 ## Usage Guide
 
-For technical docs please see [API](https://gal-orlanczyk.github.io/go-swifty-m3u8/API)
-Here are some basic usage examples of framework, there are 2 main ways for using the framework:
+For technical docs please see [API](https://gal-orlanczyk.github.io/go-swifty-m3u8/API).
+Here are some basic usage examples of usage, there are 2 main ways for using the framework:
 
-1. Fetching the playlist text on your own and use only the parser.
+1. Fetching the playlist text on your own and only use the parser.
 2. Use `M3U8Manager` to fetch and parse the playlist (a custom playlist fetcher can be provided if needed).
 
-### Using `M3U8Parser`
+* Another option can be using the `PlaylistOperation` with your own queue and write the logic for fetching whichever playlists are needed.
+
+### Using [`M3U8Parser`](https://gal-orlanczyk.github.io/go-swifty-m3u8/API/Classes/M3U8Parser.html)
 
 A simple example of parsing a playlist:
 
@@ -62,7 +64,7 @@ Additional Info:
 * The parser can be cancelled but because it is synchronous to be able to cancel the call to `parse()` must be async.
 * You can reuse the parser object to parser multiple list synchronously.
 
-### Using `M3U8Manager`
+### Using [`M3U8Manager`](https://gal-orlanczyk.github.io/go-swifty-m3u8/API/Classes/M3U8Manager.html)
 
 `M3U8Manager` can fetch and parse single playlist or multiple ones, only media playlists for multiple because we must have master playlist before fetching media playlists.
 You can also cancel all manager tasks using `cancel()`.
