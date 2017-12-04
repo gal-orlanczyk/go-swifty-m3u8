@@ -29,14 +29,14 @@ public struct MasterPlaylist: Playlist {
 
 /// `MasterPlaylistTags` objects represents tags used by the master playlist
 public struct MasterPlaylistTags {
-    let versionTag: EXT_X_VERSION?
-    let mediaTags: [EXT_X_MEDIA]
-    let streamTags: [EXT_X_STREAM_INF]
+    public let versionTag: EXT_X_VERSION?
+    public let mediaTags: [EXT_X_MEDIA]
+    public let streamTags: [EXT_X_STREAM_INF]
 }
 
 /// `MasterPlaylistTagsBuilder` used to build `MasterPlaylistTags` object.
 /// Aggregates the results when parsing and building at the end.
-public class MasterPlaylistTagsBuilder {
+class MasterPlaylistTagsBuilder {
     var versionTag: EXT_X_VERSION? = nil
     var mediaTags = [EXT_X_MEDIA]()
     var streamTags = [EXT_X_STREAM_INF]()

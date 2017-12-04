@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import GoSwiftyM3U8
+import GoSwiftyM3U8
 
 class M3U8ManagerTests: XCTestCase {
     

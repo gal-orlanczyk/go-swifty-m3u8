@@ -22,13 +22,15 @@ import Foundation
 /// The parser can be used multiple times, **but make sure to reset the state**.
 public class M3U8Parser {
     
+    public init() {}
+    
     /// `M3U8Parser` required params
     public struct Params {
         let playlist: String
         let playlistType: PlaylistType
         let baseUrl: URL
         
-        init(playlist: String, playlistType: PlaylistType, baseUrl: URL) {
+        public init(playlist: String, playlistType: PlaylistType, baseUrl: URL) {
             self.playlist = playlist
             self.playlistType = playlistType
             self.baseUrl = baseUrl
@@ -46,7 +48,7 @@ public class M3U8Parser {
         /// For example if you want to set a uri to a different url.
         let linePostProcessHandler: (([String]) -> [String])?
         
-        init(customRequiredTags: [Tag.Type]? = nil, extraTypes: [Tag.Type]? = nil, linePostProcessHandler: (([String]) -> [String])? = nil) {
+        public init(customRequiredTags: [Tag.Type]? = nil, extraTypes: [Tag.Type]? = nil, linePostProcessHandler: (([String]) -> [String])? = nil) {
             self.customHandledTags = customRequiredTags
             self.extraTags = extraTypes
             self.linePostProcessHandler = linePostProcessHandler

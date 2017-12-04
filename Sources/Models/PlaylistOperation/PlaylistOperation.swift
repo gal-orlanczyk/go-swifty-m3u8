@@ -22,11 +22,11 @@ public class PlaylistOperation: Operation {
     
     /// `PlaylistOperation` required params
     public struct Params {
-        let fetcher: PlaylistFetcher
-        let url: URL
-        let playlistType: PlaylistType
+        public let fetcher: PlaylistFetcher
+        public let url: URL
+        public let playlistType: PlaylistType
         
-        init(fetcher: PlaylistFetcher? = nil, url: URL, playlistType: PlaylistType) {
+        public init(fetcher: PlaylistFetcher? = nil, url: URL, playlistType: PlaylistType) {
             self.fetcher = fetcher ?? DefaultPlaylistFetcher()
             self.url = url
             self.playlistType = playlistType
@@ -35,7 +35,11 @@ public class PlaylistOperation: Operation {
     
     /// `PlaylistOperation` extra params
     public struct ExtraParams {
-        let parser: M3U8Parser.ExtraParams?
+        public let parser: M3U8Parser.ExtraParams?
+        
+        public init(parser: M3U8Parser.ExtraParams? = nil) {
+            self.parser = parser
+        }
     }
     
     /// Required params
@@ -47,7 +51,7 @@ public class PlaylistOperation: Operation {
     /// The results of operation
     var result: M3U8Parser.ParserResult? = nil
     
-    init(params: PlaylistOperation.Params, extraParams: PlaylistOperation.ExtraParams? = nil) {
+    public init(params: PlaylistOperation.Params, extraParams: PlaylistOperation.ExtraParams? = nil) {
         self.params = params
         self.extraParams = extraParams
     }

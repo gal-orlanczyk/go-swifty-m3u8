@@ -80,9 +80,9 @@ public class EXT_X_BITRATE: BaseValueTag<Int> {
 public class EXTINF: BaseValueTag<Double>, MultilineTag {
     override public class var tag: String { return "#EXTINF:" }
     
-    let title: String?
-    let uri: String
-    let bitrate: EXT_X_BITRATE?
+    public let title: String?
+    public let uri: String
+    public let bitrate: EXT_X_BITRATE?
     
     public required init(text: String, tagType: Tag.Type, extraParams: [String: Any]?) throws {
         // extinf tag has multi lines
@@ -127,11 +127,11 @@ public class EXT_X_KEY: BaseAttributedTag {
     static let methodAttributeKey = "METHOD"
     static let uriAttributeKey = "URI"
     
-    var method: String {
+    public var method: String {
         return self.attributes[EXT_X_KEY.methodAttributeKey] ?? ""
     }
     
-    var uri: String {
+    public var uri: String {
         return self.attributes[EXT_X_KEY.uriAttributeKey] ?? ""
     }
     
@@ -155,21 +155,21 @@ public class EXT_X_STREAM_INF: BaseAttributedTag, MultilineTag {
     static let audioAttributeKey = "AUDIO"
     static let programIdAttributeKey = "PROGRAM-ID"
     
-    let uri: String
+    public let uri: String
     
-    var bandwidth: Int {
+    public var bandwidth: Int {
         return Int(self.attributes[EXT_X_STREAM_INF.bandwidthAttributeKey] ?? " ") ?? -1
     }
     
-    var resolution: String {
+    public var resolution: String {
         return self.attributes[EXT_X_STREAM_INF.resolutionAttributeKey] ?? ""
     }
     
-    var audio: String? {
+    public var audio: String? {
         return self.attributes[EXT_X_STREAM_INF.audioAttributeKey]
     }
     
-    var programId: Int? {
+    public var programId: Int? {
         return Int(self.attributes[EXT_X_STREAM_INF.programIdAttributeKey] ?? " ")
     }
     
@@ -218,23 +218,23 @@ public class EXT_X_MEDIA: BaseAttributedTag {
     static let nameAttributeKey = "NAME"
     static let uriAttributeKey = "URI"
     
-    var mediaType: MediaType {
+    public var mediaType: MediaType {
         return MediaType(rawValue: self.attributes[EXT_X_MEDIA.typeAttributeKey]!) ?? .invalid // should never reach invalid
     }
     
-    var groupId: String {
+    public var groupId: String {
         return self.attributes[EXT_X_MEDIA.groupIdAttributeKey] ?? ""
     }
     
-    var language: String {
+    public var language: String {
         return self.attributes[EXT_X_MEDIA.languageAttributeKey] ?? ""
     }
     
-    var name: String {
+    public var name: String {
         return self.attributes[EXT_X_MEDIA.nameAttributeKey] ?? ""
     }
     
-    var uri: String {
+    public var uri: String {
         return self.attributes[EXT_X_MEDIA.uriAttributeKey] ?? ""
     }
     
