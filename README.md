@@ -7,7 +7,7 @@
 [![badge-documentation](https://gal-orlanczyk.github.io/go-swifty-m3u8/API/badge.svg)](https://gal-orlanczyk.github.io/go-swifty-m3u8/API)
 
 # GoSwiftyM3U8
-M3U8 Framework for parsing and handling .m3u8 index files
+M3U8 Framework for parsing and handling .m3u8 files (based on [Apple document](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23))
 
 ## Installation
 
