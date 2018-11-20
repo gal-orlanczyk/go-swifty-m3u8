@@ -16,6 +16,7 @@ final class TestsHelper {
     
     static let masterPlaylistUrl = URL(fileURLWithPath: Bundle(for: TestsHelper.self).path(forResource: "Resources/AppleAdvanceStreamTS/master", ofType: "m3u8")!)
     static let videoPlaylistUrl = URL(fileURLWithPath: Bundle(for: TestsHelper.self).path(forResource: "prog_index", ofType: "m3u8", inDirectory: "Resources/AppleAdvanceStreamTS/v5")!)
+    static let videoPlaylistUrlWithByteRange = URL(fileURLWithPath: Bundle(for: TestsHelper.self).path(forResource: "prog_index_byterange", ofType: "m3u8", inDirectory: "Resources/AppleAdvanceStreamTS/v5")!)
     static let audioPlaylistUrl = URL(fileURLWithPath: Bundle(for: TestsHelper.self).path(forResource: "prog_index", ofType: "m3u8", inDirectory: "Resources/AppleAdvanceStreamTS/a1")!)
     static let subtitlesPlaylistUrl = URL(fileURLWithPath: Bundle(for: TestsHelper.self).path(forResource: "prog_index", ofType: "m3u8", inDirectory: "Resources/AppleAdvanceStreamTS/s1/en")!)
     static let videoPlaylistAes128Url = URL(fileURLWithPath: Bundle(for: TestsHelper.self).path(forResource: "video-aes-128", ofType: "m3u8", inDirectory: "Resources")!)
