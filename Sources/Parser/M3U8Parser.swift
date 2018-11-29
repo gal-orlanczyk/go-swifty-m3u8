@@ -204,9 +204,8 @@ public class M3U8Parser {
             lineIndex += 1
             let extraLine = lines[lineIndex]
             line += "\n" + extraLine
-            let linesCount = multilineTagType.linesCount(for: line)
-            // add lines according to line count - 2 (-2 because first line is already inside the line and we added the second at the start).
-            for _ in 0..<linesCount - 2 {
+            let linesCount = multilineTagType.lineCounter(for: lines, currentIndex: lineIndex)
+            for _ in 0..<linesCount {
                 lineIndex += 1
                 let extraLine = lines[lineIndex]
                 line += "\n" + extraLine

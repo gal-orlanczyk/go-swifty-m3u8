@@ -66,6 +66,34 @@ public enum BoolTagType: String, StringInitializable {
     }
 }
 
+/// Represents a type with range start and range length values.
+public struct ByteRange: StringInitializable {
+    let rangeLength: Int
+    let rangeStart: Int
+    init(rangeLength: Int, rangeStart: Int) {
+        self.rangeLength = rangeLength
+        self.rangeStart = rangeStart
+    }
+    public init?(_ string: String) {
+        let byteRangeSplit = string.split(separator: "@")
+        guard let length = Int(byteRangeSplit[0]) else {
+            return nil
+        }
+        // FIXME: if the tag does not have a start range then the parser will return the wrong start value
+        // it should access this value from the previous segment in that case.
+        guard let start = Int(byteRangeSplit[1]) else {
+            return nil
+        }
+        self.init(rangeLength:length , rangeStart:start )
+    }
+    public func getRangeStart() -> Int {
+        return rangeStart
+    }
+    public func getRangeLength() -> Int {
+        return rangeLength
+    }
+}
+
 /// Repesents `EXT-X-ALLOW-CACHE` tag.
 public class EXT_X_ALLOW_CACHE: BaseValueTag<BoolTagType> {
     override public class var tag: String { return "#EXT-X-ALLOW-CACHE:" }
@@ -76,6 +104,16 @@ public class EXT_X_BITRATE: BaseValueTag<Int> {
     override public class var tag: String { return "#EXT-X-BITRATE:" }
 }
 
+/// Represents `EXT-X-BYTERANGE` tag.
+public class EXT_X_BYTERANGE: BaseValueTag<ByteRange> {
+    override public class var tag: String { return "#EXT-X-BYTERANGE:" }
+
+    public required init(text: String, tagType: Tag.Type, extraParams: [String: Any]?) throws {
+        try super.init(text: text, tagType: tagType, extraParams: extraParams)
+    }
+
+}
+
 /// Repesents `EXTINF` tag.
 public class EXTINF: BaseValueTag<Double>, MultilineTag {
     override public class var tag: String { return "#EXTINF:" }
@@ -83,22 +121,34 @@ public class EXTINF: BaseValueTag<Double>, MultilineTag {
     public let title: String?
     public let uri: String
     public let bitrate: EXT_X_BITRATE?
-    
+    public let byteRangeTag: EXT_X_BYTERANGE?
+
     public required init(text: String, tagType: Tag.Type, extraParams: [String: Any]?) throws {
         // extinf tag has multi lines
         let lines = text.components(separatedBy: .newlines)
-        let linesCount = EXTINF.linesCount(for: text)
-        guard lines.count == linesCount else { throw TagError.invalidData(tag: tagType.tag, received: "more/less than \(linesCount) lines of data", expected: "exactly \(linesCount) lines of data") }
-        if linesCount == 3 {
-            self.bitrate = try EXT_X_BITRATE(text: lines[1], tagType: EXT_X_BITRATE.self, extraParams: nil)
-            self.uri = lines[2]
-        } else {
-            self.bitrate = nil
-            self.uri = lines[1]
-        }
-        // remove comma and get optional title if exists
+        let filteredLines = lines.filter { !$0.isEmpty }
         var alteredText = lines[0]
-        if let commaRange = lines[0].range(of: ",") {
+        var byteRangeTagHolder: EXT_X_BYTERANGE?
+        var bitrateTagHolder: EXT_X_BITRATE?
+        // check each line for extra tags and handle them
+        for line in filteredLines {
+            if line.hasPrefix(EXTINF.tag) {
+                alteredText = line
+            }
+            else if line.hasPrefix(EXT_X_BYTERANGE.tag) {
+                byteRangeTagHolder = try EXT_X_BYTERANGE(text: line, tagType: EXT_X_BYTERANGE.self, extraParams: nil)
+            }
+            else if line.hasPrefix(EXT_X_BITRATE.tag)
+            {
+                bitrateTagHolder = try EXT_X_BITRATE(text: line, tagType: EXT_X_BITRATE.self, extraParams: nil)
+            }
+        }
+        self.byteRangeTag = byteRangeTagHolder
+        self.bitrate = bitrateTagHolder
+        // uri is always the last line
+            uri = lines.last!
+        // remove comma and get optional title if exists
+        if let commaRange = alteredText.range(of: ",") {
             self.title = String(alteredText[commaRange.upperBound..<alteredText.endIndex])
             alteredText.removeSubrange(commaRange.lowerBound..<alteredText.endIndex)
         } else {
@@ -106,17 +156,19 @@ public class EXTINF: BaseValueTag<Double>, MultilineTag {
         }
         try super.init(text: alteredText, tagType: tagType, extraParams: extraParams)
     }
-    
-    public static func linesCount(for text: String) -> Int {
-        let lines = text.components(separatedBy: .newlines)
-        for line in lines {
-            // for some reason Apple has #EXT-X-BITRATE tag in their own sample but there are no docs for it.
-            // we parse this tag and put it inside EXTINF when exists.
-            if line.hasPrefix(EXT_X_BITRATE.tag) {
-                return 3
+
+    public static func lineCounter(for manifestArray: [String], currentIndex:Int) -> Int {
+        var count = 0
+        for i in currentIndex+1..<manifestArray.count {
+            let currentLine = manifestArray[i]
+            guard currentLine.hasPrefix(EXT_X_BYTERANGE.tag)
+                || currentLine.hasPrefix(EXT_X_BITRATE.tag)
+                || !currentLine.hasPrefix("#EXT") else {
+                break
             }
+            count += 1
         }
-        return 2
+        return count
     }
 }
 
@@ -148,6 +200,7 @@ public class EXT_X_KEY: BaseAttributedTag {
 
 /// Repesents `EXT-X-STREAM-INF` tag.
 public class EXT_X_STREAM_INF: BaseAttributedTag, MultilineTag {
+
     override public class var tag: String { return "#EXT-X-STREAM-INF:" }
     
     static let bandwidthAttributeKey = "BANDWIDTH"
@@ -188,9 +241,9 @@ public class EXT_X_STREAM_INF: BaseAttributedTag, MultilineTag {
         self.uri = multiline[1]
         try super.init(text: multiline[0], tagType: tagType, extraParams: attributesExtraParams)
     }
-    
-    public static func linesCount(for text: String) -> Int {
-        return 2
+
+    public static func lineCounter(for manifestArray: [String], currentIndex: Int) -> Int {
+        return 0
     }
 }
 
@@ -250,4 +303,8 @@ public class EXT_X_MEDIA: BaseAttributedTag {
         ]
         try super.init(text: text, tagType: tagType, extraParams: attributesExtraParams)
     }
+}
+
+public class EXT_X_ENDLIST: BaseTag {
+    override public class var tag: String { return "#EXT-X-ENDLIST"}
 }

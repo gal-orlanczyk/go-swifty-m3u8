@@ -87,8 +87,13 @@ public protocol AttributedTag: Tag {
 }
 
 public protocol MultilineTag {
-    /// gets the line count for the text
-    static func linesCount(for text: String) -> Int
+    /// Counts the extra lines inside a multiline tag
+    ///
+    /// - Parameters:
+    ///   - manifestArray: a media playlist split into individual lines stored in an array
+    ///   - currentIndex: the current array index the parser is at.
+    /// - Returns: the number of extra lines to include for the multiline tag.
+    static func lineCounter(for manifestArray: [String], currentIndex: Int) -> Int
 }
 
 extension AttributedTag {

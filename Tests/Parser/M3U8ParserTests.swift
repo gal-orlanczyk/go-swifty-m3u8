@@ -64,7 +64,21 @@ class M3U8ParserTests: XCTestCase {
             let _ = try! parser.parse(params: params, extraParams: extraParams)
         }
     }
-    
+
+    func testParserWithByteRangedVideoMediaPlaylist() {
+        self.testByteRangedMediaPlaylist(url: TestsHelper.videoPlaylistUrlWithByteRange, playlistType: .video, version: 4, targetDuration: 11,
+                                         mediaSequence: 0, mediaSegmentsCount: 3, mediaSegmentUri: "media.ts", mediaSegmentFirstByteRangeStart: 0, mediaSegmentFirstByteRangeLength: 75232)
+    }
+
+    func testParserWithByteRangedVideoMediaPlaylistPerformance() {
+        let parser = M3U8Parser()
+        let playlist = try! String.init(contentsOf: TestsHelper.videoPlaylistUrl)
+        let params = M3U8Parser.Params(playlist: playlist, playlistType: .video, baseUrl: TestsHelper.videoPlaylistUrlWithByteRange.deletingLastPathComponent())
+        self.measure {
+            let _ = try! parser.parse(params: params, extraParams: nil)
+        }
+    }
+
     func testParserWithSubtitlesMediaPlaylist() {
         self.testMediaPlaylist(url: TestsHelper.subtitlesPlaylistUrl, playlistType: .subtitles, version: 3, targetDuration: 6,
                                mediaSequence: 0, playlistTagType: .vod, mediaSegmentsCount: 100, mediaSegmentFirstValue: 6,
@@ -104,6 +118,28 @@ class M3U8ParserTests: XCTestCase {
         XCTAssertEqual(mediaPlaylist.tags.mediaSegments.first?.value, mediaSegmentFirstValue)
         XCTAssertEqual(mediaPlaylist.tags.mediaSegments.first?.uri, mediaSegmentFirstUri)
         XCTAssertEqual(mediaPlaylist.tags.mediaSegments.last?.uri, mediaSegmentLastUri)
+    }
+
+    private func testByteRangedMediaPlaylist(url: URL, playlistType: PlaylistType, version: Int, targetDuration: Int, mediaSequence: Int, mediaSegmentsCount: Int, mediaSegmentUri: String, mediaSegmentFirstByteRangeStart: Int, mediaSegmentFirstByteRangeLength: Int) {
+        let parser = M3U8Parser()
+        let playlist = try! String.init(contentsOf: url)
+        let params = M3U8Parser.Params(playlist: playlist, playlistType: playlistType, baseUrl: url)
+        let playlistResult = try! parser.parse(params: params, extraParams: nil)
+
+        guard case let .media(mediaPlaylist) = playlistResult else {
+            XCTFail("result must be of type media playlist")
+            return
+        }
+        let firstByteRange = mediaPlaylist.tags.mediaSegments[0].byteRangeTag
+        XCTAssertEqual(mediaPlaylist.tags.versionTag?.value, version)
+        XCTAssertEqual(mediaPlaylist.tags.targetDurationTag.value, targetDuration)
+        XCTAssertEqual(mediaPlaylist.tags.mediaSequence?.value, mediaSequence)
+        XCTAssertEqual(mediaPlaylist.tags.mediaSegments.count, mediaSegmentsCount)
+        XCTAssertEqual(mediaPlaylist.tags.mediaSegments.first?.uri, mediaSegmentUri)
+        XCTAssertEqual(firstByteRange?.value.getRangeStart(), mediaSegmentFirstByteRangeStart)
+        XCTAssertEqual(firstByteRange?.value.getRangeLength(), mediaSegmentFirstByteRangeLength)
+
+
     }
     
     func testParserVideoPlaylistWithAES128() {
