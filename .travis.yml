@@ -9,7 +9,7 @@ env:
   - TVOS_SCHEME=GoSwiftyM3U8-tvOSTests
   - TVOS_SDK=appletvsimulator11.1
   - MACOS_SCHEME=GoSwiftyM3U8-macOSTests
-  - MACOS_SDK=macosx10.13
+  - MACOS_SDK=macosx10.12
   matrix:
     - DESTINATION="OS=11.1,name=iPhone 7" SCHEME="$IOS_SCHEME" SDK="$IOS_SDK" RUN_TESTS="YES" POD_LINT="NO"
     - DESTINATION="arch=x86_64" SCHEME="$MACOS_SCHEME" SDK="$MACOS_SDK" RUN_TESTS="YES" POD_LINT="NO"
