@@ -9,7 +9,7 @@ env:
   - TVOS_SCHEME=GoSwiftyM3U8-tvOSTests
   - TVOS_SDK=appletvsimulator11.1
   - MACOS_SCHEME=GoSwiftyM3U8-macOSTests
-  - MACOS_SDK=macosx10.12
+  - MACOS_SDK=macosx10.13
   matrix:
     - DESTINATION="OS=11.1,name=iPhone 7" SCHEME="$IOS_SCHEME" SDK="$IOS_SDK" RUN_TESTS="YES" POD_LINT="NO"
     - DESTINATION="arch=x86_64" SCHEME="$MACOS_SCHEME" SDK="$MACOS_SDK" RUN_TESTS="YES" POD_LINT="NO"
@@ -19,7 +19,7 @@ script:
   - set -o pipefail
   # Build Framework in Debug and Run Tests if specified
   - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c;
+      xcodebuild -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test;
     else
       xcodebuild -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty -c;
     fi
