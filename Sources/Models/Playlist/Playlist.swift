@@ -45,6 +45,7 @@ public enum PlaylistType: String {
             return [
                 EXT_X_MEDIA.self,
                 EXT_X_STREAM_INF.self,
+                EXT_X_SESSION_KEY.self,
                 EXT_X_VERSION.self
             ]
         case .video, .audio, .subtitles:

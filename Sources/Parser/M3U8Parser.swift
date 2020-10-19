@@ -228,6 +228,9 @@ public class M3U8Parser {
         case is EXT_X_VERSION.Type:
             let versionTag = try tagType.init(text: line, tagType: EXT_X_VERSION.self, extraParams: nil) as? EXT_X_VERSION
             masterPlaylistTagsBuilder.versionTag = versionTag
+        case is EXT_X_SESSION_KEY.Type:
+            let sessionKeyTag = try tagType.init(text: line, tagType: EXT_X_SESSION_KEY.self, extraParams: nil) as? EXT_X_SESSION_KEY
+            masterPlaylistTagsBuilder.sessionKeyTag = sessionKeyTag
         default: break
         }
     }
