@@ -251,3 +251,44 @@ public class EXT_X_MEDIA: BaseAttributedTag {
         try super.init(text: text, tagType: tagType, extraParams: attributesExtraParams)
     }
 }
+
+/// Repesents `EXT-X-SESSION-KEY` tag.
+public class EXT_X_SESSION_KEY: BaseAttributedTag {
+    override public class var tag: String { return "#EXT-X-SESSION-KEY:" }
+    
+    static let methodAttributeKey = "METHOD"
+    static let uriAttributeKey = "URI"
+    static let keyFormatKey = "KEYFORMAT"
+    static let keyFormatVersionsKey = "KEYFORMATVERSIONS"
+    
+    public var method: String {
+        return self.attributes[EXT_X_SESSION_KEY.methodAttributeKey] ?? ""
+    }
+    
+    public var uri: String {
+        return self.attributes[EXT_X_SESSION_KEY.uriAttributeKey] ?? ""
+    }
+    
+    public var keyFormat: String {
+        return self.attributes[EXT_X_SESSION_KEY.keyFormatKey] ?? ""
+    }
+    
+    public var keyFormatVersions: String {
+        return self.attributes[EXT_X_SESSION_KEY.keyFormatVersionsKey] ?? ""
+    }
+    
+    public required init(text: String, tagType: Tag.Type, extraParams: [String: Any]?) throws {
+        let attributesExtraParams: [String: Any] = [
+            TagParamsKeys.attributesCount: 4,
+            TagParamsKeys.attributesSeperator: ",",
+            TagParamsKeys.attributesExtrasToRemove: ["\""],
+            TagParamsKeys.attributesKeys: [
+                EXT_X_SESSION_KEY.methodAttributeKey,
+                EXT_X_SESSION_KEY.uriAttributeKey,
+                EXT_X_SESSION_KEY.keyFormatKey,
+                EXT_X_SESSION_KEY.keyFormatVersionsKey
+            ]
+        ]
+        try super.init(text: text, tagType: tagType, extraParams: attributesExtraParams)
+    }
+}

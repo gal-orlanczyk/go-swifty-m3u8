@@ -30,6 +30,7 @@ public struct MasterPlaylist: Playlist {
 /// `MasterPlaylistTags` objects represents tags used by the master playlist
 public struct MasterPlaylistTags {
     public let versionTag: EXT_X_VERSION?
+    public let sessionKeyTag: EXT_X_SESSION_KEY?
     public let mediaTags: [EXT_X_MEDIA]
     public let streamTags: [EXT_X_STREAM_INF]
 }
@@ -38,10 +39,14 @@ public struct MasterPlaylistTags {
 /// Aggregates the results when parsing and building at the end.
 class MasterPlaylistTagsBuilder {
     var versionTag: EXT_X_VERSION? = nil
+    var sessionKeyTag: EXT_X_SESSION_KEY? = nil
     var mediaTags = [EXT_X_MEDIA]()
     var streamTags = [EXT_X_STREAM_INF]()
     
     func build() -> MasterPlaylistTags? {
-        return MasterPlaylistTags(versionTag: self.versionTag, mediaTags: self.mediaTags, streamTags: self.streamTags)
+        return MasterPlaylistTags(versionTag: self.versionTag,
+                                  sessionKeyTag: self.sessionKeyTag,
+                                  mediaTags: self.mediaTags,
+                                  streamTags: self.streamTags)
     }
 }
