@@ -11,7 +11,8 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Sergio Ortega" => "sergio.ortegamartinez@telefonica.com" }
   
-  s.ios.deployment_target = "12.0"
+  s.tvos.deployment_target = '14.0'
+  s.ios.deployment_target = '14.0'
   
   s.source = { :git => "https://github.com/Telefonica/go-swifty-m3u8.git", :tag => s.version.to_s }
   s.source_files = 'Sources/**/*.swift'
