@@ -292,3 +292,40 @@ public class EXT_X_SESSION_KEY: BaseAttributedTag {
         try super.init(text: text, tagType: tagType, extraParams: attributesExtraParams)
     }
 }
+
+
+/// Repesents `EXT-X-STREAM-INF` tag.
+public class EXT_X_I_FRAME_STREAM_INF: BaseAttributedTag {
+    override public class var tag: String { return "#EXT-X-I-FRAME-STREAM-INF:" }
+    
+    static let bandwidthAttributeKey = "BANDWIDTH"
+    static let programIdAttributeKey = "PROGRAM-ID"
+    static let uriAttributeKey = "URI"
+    
+    public var bandwidth: Int {
+        return Int(self.attributes[EXT_X_I_FRAME_STREAM_INF.bandwidthAttributeKey] ?? " ") ?? -1
+    }
+    
+    public var programId: Int? {
+        return Int(self.attributes[EXT_X_I_FRAME_STREAM_INF.programIdAttributeKey] ?? " ")
+    }
+    
+    public var uri: String? {
+        return self.attributes[EXT_X_I_FRAME_STREAM_INF.uriAttributeKey] ?? ""
+    }
+    
+    public required init(text: String, tagType: Tag.Type, extraParams: [String: Any]?) throws {
+        let attributesExtraParams: [String: Any] = [
+            TagParamsKeys.attributesCount: 2,
+            TagParamsKeys.attributesSeperator: ",",
+            TagParamsKeys.attributesExtrasToRemove: ["\""],
+            TagParamsKeys.attributesKeys: [
+                EXT_X_I_FRAME_STREAM_INF.bandwidthAttributeKey,
+                EXT_X_I_FRAME_STREAM_INF.uriAttributeKey
+            ]
+        ]
+        try super.init(text:text, tagType: tagType, extraParams: attributesExtraParams)
+    }
+}
+
+
