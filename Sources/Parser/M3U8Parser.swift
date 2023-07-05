@@ -231,6 +231,9 @@ public class M3U8Parser {
         case is EXT_X_SESSION_KEY.Type:
             let sessionKeyTag = try tagType.init(text: line, tagType: EXT_X_SESSION_KEY.self, extraParams: nil) as? EXT_X_SESSION_KEY
             masterPlaylistTagsBuilder.sessionKeyTag = sessionKeyTag
+        case is EXT_X_I_FRAME_STREAM_INF.Type:
+            let iFrameTag = try tagType.init(text: line, tagType: EXT_X_I_FRAME_STREAM_INF.self, extraParams: nil) as! EXT_X_I_FRAME_STREAM_INF
+            masterPlaylistTagsBuilder.iFrameTags.append(iFrameTag)
         default: break
         }
     }
