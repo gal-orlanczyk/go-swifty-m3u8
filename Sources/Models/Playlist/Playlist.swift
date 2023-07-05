@@ -37,6 +37,7 @@ public enum PlaylistType: String {
     case video
     case audio
     case subtitles
+    case iframes
     
     /// The default handled tags for each playlist type, this is used a default by the parser.
     var handledTagTypes: [Tag.Type] {
@@ -58,6 +59,11 @@ public enum PlaylistType: String {
                 EXT_X_KEY.self,
                 EXT_X_ALLOW_CACHE.self,
                 EXT_X_MEDIA_SEQUENCE.self
+            ]
+        case .iframes:
+            return [
+                EXT_X_MEDIA.self,
+                EXT_X_I_FRAME_STREAM_INF.self
             ]
         }
     }

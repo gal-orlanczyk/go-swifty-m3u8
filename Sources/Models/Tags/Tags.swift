@@ -294,7 +294,7 @@ public class EXT_X_SESSION_KEY: BaseAttributedTag {
 }
 
 
-/// Repesents `EXT-X-STREAM-INF` tag.
+/// Repesents `EXT_X_I_FRAME_STREAM_INF` tag.
 public class EXT_X_I_FRAME_STREAM_INF: BaseAttributedTag {
     override public class var tag: String { return "#EXT-X-I-FRAME-STREAM-INF:" }
     
