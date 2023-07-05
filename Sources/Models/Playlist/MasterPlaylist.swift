@@ -33,6 +33,7 @@ public struct MasterPlaylistTags {
     public let sessionKeyTag: EXT_X_SESSION_KEY?
     public let mediaTags: [EXT_X_MEDIA]
     public let streamTags: [EXT_X_STREAM_INF]
+    public let iFrameTags: [EXT_X_I_FRAME_STREAM_INF]
 }
 
 /// `MasterPlaylistTagsBuilder` used to build `MasterPlaylistTags` object.
@@ -42,11 +43,14 @@ class MasterPlaylistTagsBuilder {
     var sessionKeyTag: EXT_X_SESSION_KEY? = nil
     var mediaTags = [EXT_X_MEDIA]()
     var streamTags = [EXT_X_STREAM_INF]()
+    var iFrameTags = [EXT_X_I_FRAME_STREAM_INF]()
     
     func build() -> MasterPlaylistTags? {
         return MasterPlaylistTags(versionTag: self.versionTag,
                                   sessionKeyTag: self.sessionKeyTag,
                                   mediaTags: self.mediaTags,
-                                  streamTags: self.streamTags)
+                                  streamTags: self.streamTags,
+                                  iFrameTags: self.iFrameTags)
     }
 }
+
